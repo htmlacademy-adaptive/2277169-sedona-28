@@ -1,12 +1,138 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
+<html class="page" lang="ru">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+</head>
 
-  </body>
+<body class="page__body">
+  <header class="main-header">
+    <a class="main-header__logo">
+      <img class="main-header__logo-image" src="img/logotype-phone-icon.svg" alt="Логотип города Седона" width="185"
+        height="96">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">
+          Открыть меню
+        </span>
+      </button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list nav-list">
+          <li class="nav-list__item nav-list__item--current">
+            <a>Главная</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="catalog.html">Фото и видео</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="form.html">Форма отзыва</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#">HTML academy</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="main-container">
+    <h1 class="visually-hidden">Горный курорт Седона</h1>
+    <section class="hero">
+      <div class="hero__wrapper">
+        <h2 class="visually-hidden">Приглашаем Вас</h2>
+        <img class="hero__image" src="img/hero-icon.svg" alt="Добро пожаловать в Седону" width="282" height="214">
+      </div>
+    </section>
+    <section class="advantages">
+      <div class="advantages__wrapper">
+        <h2 class="title advantages__title">
+          СЕДОНА — небольшой городок в АРИЗОНЕ, зАСЛУЖИвающий большего!
+        </h2>
+        <p class="description advantages__description">
+          Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
+        </p>
+        <ul class="advantages__list infrastructure-list">
+          <li class="infrastructure-list__item">
+            <h3 class="infrastructure-list__title">НАСТОЯЩИЙ ГОРОДОК</h3>
+            <span>— №1 —</span>
+            <p class="infrastructure-list__description">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+            <img src="#" alt="Городская инфраструктура" width="512" height="256">
+          </li>
+          <li class="infrastructure-list__item">
+            <h3 class="infrastructure-list__title">ТАМ ЕСТЬ Мост дьявола</h3>
+            <span>— №2 —</span>
+            <p class="infrastructure-list__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+            <img src="#" alt="Мост в горах" width="512" height="256">
+          </li>
+          <li class="infrastructure-list__item">
+            <h3 class="infrastructure-list__title">НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
+            <span>— №3 —</span>
+            <p class="infrastructure-list__description">Все интересные места находятся очень близко</p>
+          </li>
+          <li class="infrastructure-list__item">
+            <h3 class="infrastructure-list__title">КРАСИВАЯ ДОРОГА</h3>
+            <span>— №4 —</span>
+            <p class="infrastructure-list__description">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
+          </li>
+          <li class="infrastructure-list__item">
+            <h3 class="infrastructure-list__title">МАЛО ТУРИСТОВ</h3>
+            <span>— №5 —</span>
+            <p class="infrastructure-list__description">Большинство едет в гранд каньон и толпится там</p>
+          </li>
+        </ul>
+        <ul class="advantages__list services-list">
+          <li class="services-list__item">
+            <h3 class="services-list__title">Жилье</h3>
+            <p class="description services-list__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+          </li>
+          <li class="services-list__item">
+            <h3 class="services-list__title">ЕДА</h3>
+            <p class="description services-list__description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!
+            </p>
+          </li>
+          <li class="services-list__item">
+            <h3 class="services-list__title">СУВЕНИРЫ</h3>
+            <p class="description services-list__description">Не только китайского, но и местного производства!</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="search">
+      <div class="search__wrapper">
+        <h2 class="visually-hidden">Поиск гостиницы</h2>
+        <p class="search__description">ЗАИНТЕРЕСОВАЛИСЬ?</p>
+        <p class="search__description-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
+          гостиниц в седоне</p>
+        <a class="search__button" href="#" target="_blank">Найти Гостиницу</a>
+      </div>
+    </section>
+    <div class="map">
+      <img class="map__image" src="source/img/picture/map-mobile-picture.jpg" alt="Карта" width="320" height="350">
+      <button class="button map__button" type="button">
+        <span class="visually-hidden">Вы здесь</span>
+      </button>
+    </div>
+    <footer class="main-footer">
+      <h2 class="main-footer__title">#visitSEDONA</h2>
+      <ul class="social-list">
+        <li class="social-list__item">
+          <span class="visually-hidden">Мы в ВКонтакте</span>
+        </li>
+        <li class="social-list__item">
+          <span class="visually-hidden">Мы в Телеграм</span>
+        </li>
+        <li class="social-list__item">
+          <span class="visually-hidden">Мы в Youtube</span>
+        </li>
+      </ul>
+      <div class="main-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <span class="copyright__description">Разработано</span>
+        </a>
+      </div>
+    </footer>
+  </main>
+</body>
+
 </html>
