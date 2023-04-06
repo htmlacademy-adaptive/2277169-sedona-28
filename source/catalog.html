@@ -7,72 +7,73 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
-    <a class="main-header__logo">
-      <img class="main-header__logo-image" src="img/logotype-phone-icon.svg" alt="Логотип города Седона" width="185"
-        height="96">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">
-          Открыть меню
-        </span>
-      </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list nav-list">
-          <li class="nav-list__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="nav-list__item nav-list__item--current">
-            <a>Фото и видео</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="form.html">Форма отзыва</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="#">HTML academy</a>
+  <div class="container">
+    <header class="main-header">
+      <a class="main-header__logo">
+        <img class="main-header__logo-image" src="img/logotype-phone-icon.svg" alt="Логотип города Седона" width="185"
+          height="96">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">
+            Открыть меню
+          </span>
+        </button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list nav-list">
+            <li class="nav-list__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="nav-list__item nav-list__item--current">
+              <a>Фото и видео</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="form.html">Форма отзыва</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#">HTML academy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main-container">
+      <h1 class="visually-hidden">Горный курорт Седона</h1>
+      <section class="hero">
+        <div class="hero__wrapper">
+          <h2 class="visually-hidden">Приглашаем Вас</h2>
+          <img class="hero__image" src="img/sedona-catalog.svg" alt="Добро пожаловать в Седону">
+        </div>
+      </section>
+      <section class="gallery">
+        <h2 class="gallery__title">Фото и видео</h2>
+        <p class="gallery__description">Не можете решиться на путешествие из-за курса? Фотографии помогут
+          вам забыть о политике и экономике.</p>
+        <ul class="gallery__list">
+          <li class="gallery__item">
+            <h3 class="gallery__title">Неродные просторы</h3>
+            <img class="gallery__image" src="img/picture/catalog-mobile-sunset.jpg" alt="Закат" width="280"
+              height="280">
+            <p class="gallery__description">Автор фото: Борис</p>
+            <span class="gallery__number">1350</span>
           </li>
         </ul>
-      </div>
-    </nav>
-  </header>
-  <main class="main-container">
-    <h1 class="visually-hidden">Горный курорт Седона</h1>
-    <section class="hero">
-      <div class="hero__wrapper">
-        <h2 class="visually-hidden">Приглашаем Вас</h2>
-        <img class="hero__image" src="img/sedona-catalog.svg" alt="Добро пожаловать в Седону">
-      </div>
-    </section>
-    <section class="gallery">
-      <h2 class="gallery__title">Фото и видео</h2>
-      <p class="gallery__description">Не можете решиться на путешествие из-за курса? Фотографии помогут
-        вам забыть о политике и экономике.</p>
-      <ul class="gallery__list">
-        <li class="gallery__item">
-          <h3 class="gallery__title">Неродные просторы</h3>
-          <img class="gallery__image" src="img/picture/catalog-mobile-sunset.jpg" alt="Закат" width="280" height="280">
-          <p class="gallery__description">Автор фото: Борис</p>
-          <span class="gallery__number">1350</span>
-        </li>
-      </ul>
-    </section>
-    <section class="search">
-      <div class="search__wrapper">
-        <h2 class="visually-hidden">Поиск гостиницы</h2>
-        <p class="search__description">Все еще сомневаетесь?</p>
-        <p class="search__description-text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
+      </section>
+      <section class="search">
+        <h2 class="search__title">Все еще сомневаетесь?</h2>
+        <p class="search__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
           очередной раз!</p>
         <a class="search__link" href="#" target="_blank">
-          <img src="img/picture/video-mobile.jpg" alt="Горная дорога" width="280" height="177">
+          <img class="search__image" src="img/picture/video-mobile.jpg" alt="Горная дорога" width="280" height="177">
         </a>
         <button class="search__button" type="button">
           <span class="visually-hidden">Воспроизвести</span>
         </button>
-      </div>
-    </section>
+      </section>
+    </main>
     <footer class="main-footer">
-      <h2 class="main-footer__title">#visitSEDONA</h2>
+      <h2 class="visually-hidden">Мы в социальных сетях</h2>
+      <span class="main-footer__title">#visitSEDONA</span>
       <ul class="social-list">
         <li class="social-list__item">
           <span class="visually-hidden">Мы в ВКонтакте</span>
@@ -90,7 +91,7 @@
         </a>
       </div>
     </footer>
-  </main>
+  </div>
 </body>
 
 </html>
