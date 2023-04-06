@@ -8,18 +8,18 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
-    <a class="main-header__logo">
-      <img class="main-header__logo-image" src="img/logotype-phone-icon.svg" alt="Логотип города Седона" width="185"
-        height="96">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">
-          Открыть меню
-        </span>
-      </button>
-      <div class="main-nav__wrapper">
+  <div class="container">
+    <header class="main-header">
+      <a class="main-header__logo">
+        <img class="main-header__logo-image" src="img/logotype-phone-icon.svg" alt="Логотип города Седона" width="185"
+          height="96">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">
+            Открыть меню
+          </span>
+        </button>
         <ul class="main-nav__list nav-list">
           <li class="nav-list__item nav-list__item--current">
             <a>Главная</a>
@@ -34,88 +34,90 @@
             <a href="#">HTML academy</a>
           </li>
         </ul>
-      </div>
-    </nav>
-  </header>
-  <main class="main-container">
-    <h1 class="visually-hidden">Горный курорт Седона</h1>
-    <section class="hero">
-      <div class="hero__wrapper">
-        <h2 class="visually-hidden">Приглашаем Вас</h2>
-        <img class="hero__image" src="img/hero-icon.svg" alt="Добро пожаловать в Седону" width="282" height="214">
-      </div>
-    </section>
-    <section class="advantages">
-      <div class="advantages__wrapper">
-        <h2 class="title advantages__title">
-          СЕДОНА — небольшой городок в АРИЗОНЕ, зАСЛУЖИвающий большего!
+      </nav>
+    </header>
+    <main class="main-container">
+      <h1 class="visually-hidden">Горный курорт Седона</h1>
+      <section class="hero">
+        <div class="hero__wrapper">
+          <h2 class="visually-hidden">Приглашаем Вас</h2>
+          <img class="hero__image" src="img/hero-icon.svg" alt="Добро пожаловать в Седону" width="282" height="214">
+        </div>
+      </section>
+      <section class="advantages">
+        <h2 class="advantages__title title">
+          Седона — небольшой городок в Аризоне, заслуживающий большего!
         </h2>
-        <p class="description advantages__description">
+        <p class="advantages__description text">
           Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
         </p>
         <ul class="advantages__list infrastructure-list">
           <li class="infrastructure-list__item">
-            <h3 class="infrastructure-list__title">НАСТОЯЩИЙ ГОРОДОК</h3>
-            <span>— №1 —</span>
-            <p class="infrastructure-list__description">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+            <h3 class="infrastructure-list__title">Настоящий городок</h3>
+            <span class="infrastructure-list__number">— №1 —</span>
+            <p class="infrastructure-list__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
             <img src="#" alt="Городская инфраструктура" width="512" height="256">
           </li>
           <li class="infrastructure-list__item">
-            <h3 class="infrastructure-list__title">ТАМ ЕСТЬ Мост дьявола</h3>
-            <span>— №2 —</span>
+            <ul class="advantages__list services-list">
+              <li class="services-list__item">
+                <h3 class="services-list__title">Жилье</h3>
+                <p class="description services-list__description">Рекомендуем пожить в настоящем мотеле, все как в
+                  кино!
+                </p>
+              </li>
+              <li class="services-list__item">
+                <h3 class="services-list__title">Еда</h3>
+                <p class="description services-list__description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы не
+                  разочаруетесь!
+                </p>
+              </li>
+              <li class="services-list__item">
+                <h3 class="services-list__title">Сувениры</h3>
+                <p class="description services-list__description">Не только китайского, но и местного производства!
+                </p>
+              </li>
+            </ul>
+          </li>
+          <li class="infrastructure-list__item">
+            <h3 class="infrastructure-list__title">Там есть Мост дьявола</h3>
+            <span class="infrastructure-list__number">— №2 —</span>
             <p class="infrastructure-list__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             <img src="#" alt="Мост в горах" width="512" height="256">
           </li>
           <li class="infrastructure-list__item">
-            <h3 class="infrastructure-list__title">НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
-            <span>— №3 —</span>
+            <h3 class="infrastructure-list__title">Небольшая площадь</h3>
+            <span class="infrastructure-list__number">— №3 —</span>
             <p class="infrastructure-list__description">Все интересные места находятся очень близко</p>
           </li>
           <li class="infrastructure-list__item">
-            <h3 class="infrastructure-list__title">КРАСИВАЯ ДОРОГА</h3>
-            <span>— №4 —</span>
-            <p class="infrastructure-list__description">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
+            <h3 class="infrastructure-list__title">Красивая дорога</h3>
+            <span class="infrastructure-list__number">— №4 —</span>
+            <p class="infrastructure-list__description">Ехать в Седону из ЛАС-ВЕГАСА совсем не скучно!</p>
           </li>
           <li class="infrastructure-list__item">
-            <h3 class="infrastructure-list__title">МАЛО ТУРИСТОВ</h3>
-            <span>— №5 —</span>
+            <h3 class="infrastructure-list__title">Мало туристов</h3>
+            <span class="infrastructure-list__number">— №5 —</span>
             <p class="infrastructure-list__description">Большинство едет в гранд каньон и толпится там</p>
           </li>
         </ul>
-        <ul class="advantages__list services-list">
-          <li class="services-list__item">
-            <h3 class="services-list__title">Жилье</h3>
-            <p class="description services-list__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-          </li>
-          <li class="services-list__item">
-            <h3 class="services-list__title">ЕДА</h3>
-            <p class="description services-list__description">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!
-            </p>
-          </li>
-          <li class="services-list__item">
-            <h3 class="services-list__title">СУВЕНИРЫ</h3>
-            <p class="description services-list__description">Не только китайского, но и местного производства!</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="search">
-      <div class="search__wrapper">
-        <h2 class="visually-hidden">Поиск гостиницы</h2>
-        <p class="search__description">ЗАИНТЕРЕСОВАЛИСЬ?</p>
-        <p class="search__description-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
+      </section>
+      <section class="search">
+        <h2 class="search__title">Заинтересовались?</h2>
+        <p class="search__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
           гостиниц в седоне</p>
-        <a class="search__button" href="#" target="_blank">Найти Гостиницу</a>
+        <a class="search__button" href="#" target="_blank">Найти гостиницу</a>
+      </section>
+      <div class="map">
+        <img class="map__image" src="source/img/picture/map-mobile-picture.jpg" alt="Карта" width="320" height="350">
+        <button class="map__button button" type="button">
+          <span class="visually-hidden">Вы здесь</span>
+        </button>
       </div>
-    </section>
-    <div class="map">
-      <img class="map__image" src="source/img/picture/map-mobile-picture.jpg" alt="Карта" width="320" height="350">
-      <button class="button map__button" type="button">
-        <span class="visually-hidden">Вы здесь</span>
-      </button>
-    </div>
+    </main>
     <footer class="main-footer">
-      <h2 class="main-footer__title">#visitSEDONA</h2>
+      <h2 class="visually-hidden">Мы в социальных сетях</h2>
+      <span class="main-footer__title">#visitSEDONA</span>
       <ul class="social-list">
         <li class="social-list__item">
           <span class="visually-hidden">Мы в ВКонтакте</span>
@@ -133,7 +135,7 @@
         </a>
       </div>
     </footer>
-  </main>
+  </div>
 </body>
 
 </html>
