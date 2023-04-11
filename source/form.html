@@ -8,7 +8,7 @@
 </head>
 
 <body class="page__body">
-  <div class="container">
+  <div class="container container-design">
     <header class="main-header">
       <a class="main-header__logo">
         <img class="main-header__logo-image" src="img/logotype-phone-icon.svg" alt="Логотип города Седона" width="185"
@@ -19,23 +19,25 @@
           <span class="visually-hidden">
             Открыть меню
           </span>
+          <svg class="main-nav__toggle-image" xmlns="http://www.w3.org/2000/svg" width="23" height="22" fill="none"
+            viewBox="0 0 23 22">
+            <path fill="#81B3D2" d="M22.9 0H0v4h22.9V0ZM22.9 9H0v4h22.9V9ZM22.9 18H0v4h22.9v-4Z" />
+          </svg>
         </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list nav-list">
-            <li class="nav-list__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="catalog.html">Фото и видео</a>
-            </li>
-            <li class="nav-list__item nav-list__item--current">
-              <a>Форма отзыва</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="#">HTML academy</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="main-nav__list nav-list nav-list nav-list--close">
+          <li class="nav-list__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="catalog.html">Фото и видео</a>
+          </li>
+          <li class="nav-list__item nav-list__item--current">
+            <a>Форма отзыва</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#">HTML academy</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <main class="main-container">

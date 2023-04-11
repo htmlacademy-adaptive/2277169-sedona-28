@@ -7,6 +7,10 @@
   flex-direction: column;
 }
 
+.nav-list--close {
+  display: none;
+}
+
 .nav-list__link {
   text-decoration: none;
   font-weight: 700;
