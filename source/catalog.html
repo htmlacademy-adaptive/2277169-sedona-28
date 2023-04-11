@@ -4,20 +4,25 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
-  <div class="container">
+  <div class="container container-design">
     <header class="main-header">
       <a class="main-header__logo">
         <img class="main-header__logo-image" src="img/logotype-phone-icon.svg" alt="Логотип города Седона" width="185"
           height="96">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+        <button class="main-nav__toggle button" type="button">
           <span class="visually-hidden">
             Открыть меню
           </span>
+          <svg class="main-nav__toggle-image" xmlns="http://www.w3.org/2000/svg" width="23" height="22" fill="none"
+            viewBox="0 0 23 22">
+            <path fill="#81B3D2" d="M22.9 0H0v4h22.9V0ZM22.9 9H0v4h22.9V9ZM22.9 18H0v4h22.9v-4Z" />
+          </svg>
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list nav-list">
@@ -46,21 +51,39 @@
         </div>
       </section>
       <section class="gallery">
-        <h2 class="gallery__title">Фото и видео</h2>
+        <h2 class="gallery__title title">Фото и видео</h2>
         <p class="gallery__description">Не можете решиться на путешествие из-за курса? Фотографии помогут
           вам забыть о политике и экономике.</p>
-        <ul class="gallery__list">
+        <ul class="gallery__list gallery-list">
           <li class="gallery__item">
-            <h3 class="gallery__title">Неродные просторы</h3>
+            <h3 class="gallery__title title">Неродные просторы</h3>
             <img class="gallery__image" src="img/picture/catalog-mobile-sunset.jpg" alt="Закат" width="280"
               height="280">
             <p class="gallery__description">Автор фото: Борис</p>
             <span class="gallery__number">1350</span>
           </li>
+          <li class="gallery__item">
+            <h3 class="gallery__title title">Местная растительность</h3>
+            <img class="gallery__image" src="img/picture/vegetation-mobile.jpg" alt="Закат" width="280" height="280">
+            <p class="gallery__description">Автор фото: Сергей</p>
+            <span class="gallery__number">143</span>
+          </li>
+          <li class="gallery__item">
+            <h3 class="gallery__title title">Дорога на север</h3>
+            <img class="gallery__image" src="img/picture/road-mobile.jpg" alt="Закат" width="280" height="280">
+            <p class="gallery__description">Автор фото: Петр</p>
+            <span class="gallery__number">96</span>
+          </li>
+          <li class="gallery__item">
+            <h3 class="gallery__title title">Мост дьявола</h3>
+            <img class="gallery__image" src="img/picture/bridge-mobile.jpg" alt="Закат" width="280" height="280">
+            <p class="gallery__description">Автор фото: Антон</p>
+            <span class="gallery__number">254</span>
+          </li>
         </ul>
       </section>
       <section class="search">
-        <h2 class="search__title">Все еще сомневаетесь?</h2>
+        <h2 class="search__title title">Все еще сомневаетесь?</h2>
         <p class="search__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
           очередной раз!</p>
         <a class="search__link" href="#" target="_blank">
