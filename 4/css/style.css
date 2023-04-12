@@ -1,0 +1,245 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: none;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  margin: 0 auto;
+  width: 320px;
+}
+
+.container-design {
+  background-color: #ffffff;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("source/fonts/ptsans.woff2") format("woff2"), url("source/fonts/ptsans.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("source/fonts/ptsansbold.woff2") format("woff2"), url("source/fonts/ptsansbold.woff") format("woff");
+  font-display: swap;
+}
+.page__body {
+  width: 320px;
+  margin: 0 auto;
+  height: 100%;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+  text-align: center;
+  background-color: #e7e5e5;
+  text-transform: uppercase;
+}
+
+.main-header {
+  max-height: 56px;
+  position: relative;
+}
+
+.main-nav__toggle {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-list__link {
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.nav-list__link--mobile {
+  color: #ffffff;
+  display: block;
+  background-color: #81b3d2;
+  padding-top: 17px;
+  padding-bottom: 12px;
+}
+
+.nav-list__item {
+  position: relative;
+}
+
+.nav-list__item--current {
+  color: #766357;
+}
+
+.main-nav__toggle-image {
+  position: absolute;
+  top: 17px;
+  right: 16px;
+}
+
+.hero {
+  background-color: #756157;
+  background-image: url("../img/intro-triangle.svg"), url("../img/picture/hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 320px;
+}
+
+.hero__image {
+  margin-top: 90px;
+  margin-bottom: 85px;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.advantages__container {
+  padding: 32px 18px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  mix-blend-mode: normal;
+}
+
+.text {
+  margin: 0;
+}
+
+.infrastructure-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #eeeeee;
+}
+
+.infrastructure-list__item--theme-blue {
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+
+.infrastructure-list__wrapper-ladder {
+  padding: 54px 18px 40px;
+  background-image: url("../img/copy-ladder.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.infrastructure-list__wrapper {
+  padding: 37px 18px;
+}
+
+.infrastructure-list__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.infrastructure-list__title {
+  margin: 0;
+  margin-bottom: 11px;
+}
+
+.infrastructure-list__number {
+  display: block;
+  margin-bottom: 17px;
+}
+
+.infrastructure-list__item--small {
+  padding: 24px 18px 28px;
+}
+
+.services-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #ffffff;
+  padding-top: 23px;
+  padding-bottom: 13px;
+}
+
+.services-list__title {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  text-align: left;
+  padding-left: 65px;
+}
+
+.services-list__description {
+  margin: 0;
+  margin-bottom: 33px;
+  padding-left: 65px;
+  text-align: left;
+  color: #333333;
+}
+
+.search__container {
+  padding: 38px 29px 32px;
+}
+
+.search__button {
+  background-color: #81b3d2;
+  color: #ffffff;
+  padding: 16px 49px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.button {
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  text-transform: uppercase;
+}
+
+.social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/*# sourceMappingURL=style.css.map */
