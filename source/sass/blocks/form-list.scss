@@ -1,3 +1,51 @@
 .form-list {
   @include list-reset;
+  margin-bottom: 39px;
+}
+
+.form-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  width: 280px;
+}
+
+.form-list__subtitle {
+  color: #333333;
+  margin-left: 16px;
+}
+
+.form-list__input {
+  width: 280px;
+  margin: 0;
+  background-color: #f2f2f2;
+  border: none;
+  min-height: 58px;
+  padding: 16px;
+}
+
+.form-list__input::placeholder {
+  color: #000000;
+}
+
+.form-list__item--row {
+  flex-direction: row;
+  align-items: center;
+  width: 280px;
+}
+
+.form-list__input--contacts::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.form-list__input--size {
+  width: 46px;
+  height: 46px;
+}
+
+.form-list__subtitle--size {
+  width: 218px;
+  text-align: left;
+  font-weight: 700;
 }

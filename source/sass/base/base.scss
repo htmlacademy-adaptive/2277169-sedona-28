@@ -4,29 +4,7 @@
   box-sizing: border-box;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: none;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 img {
   max-width: 100%;
   height: auto;
-}
-
-.container {
-  margin: 0 auto;
-  width: 320px;
-}
-
-.container-design {
-  background-color: #ffffff;
 }
