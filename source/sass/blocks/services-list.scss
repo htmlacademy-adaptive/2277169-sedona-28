@@ -1,0 +1,22 @@
+.services-list {
+  @include list-reset;
+  background-color: #ffffff;
+  padding-top: 23px;
+  padding-bottom: 13px;
+}
+
+.services-list__title {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  text-align: left;
+  padding-left: 65px;
+}
+
+.services-list__description {
+  margin: 0;
+  margin-bottom: 33px;
+  padding-left: 65px;
+  text-align: left;
+  color: #333333;
+}
+

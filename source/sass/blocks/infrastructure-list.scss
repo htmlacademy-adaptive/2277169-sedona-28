@@ -1,0 +1,39 @@
+.infrastructure-list {
+  @include list-reset;
+  background-color: #eeeeee;
+}
+
+.infrastructure-list__item--theme-blue {
+  color: #ffffff;
+  background-color: $base-color;
+}
+
+.infrastructure-list__wrapper-ladder {
+  padding: 54px 18px 40px;
+  background-image: url("../img/copy-ladder.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.infrastructure-list__wrapper {
+  padding: 37px 18px;
+}
+
+.infrastructure-list__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.infrastructure-list__title {
+  margin: 0;
+  margin-bottom: 11px;
+}
+
+.infrastructure-list__number {
+  display: block;
+  margin-bottom: 17px;
+}
+
+.infrastructure-list__item--small {
+  padding: 24px 18px 28px;
+}
