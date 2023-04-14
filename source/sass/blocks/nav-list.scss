@@ -1,15 +1,5 @@
 .nav-list {
   @include list-reset;
-  position: absolute;
-  top: 0;
-  width: 320px;
-  display: flex;
-  flex-direction: column;
-}
-
-.nav-list--close,
-.close {
-  display: none;
 }
 
 .nav-list__link {
@@ -18,10 +8,6 @@
   cursor: pointer;
   font-size: 18px;
   line-height: 26px;
-}
-
-
-.nav-list__link--mobile {
   color: #ffffff;
   display: block;
   background-color: $base-color;
@@ -29,10 +15,26 @@
   padding-bottom: 12px;
 }
 
-.nav-list__item {
-  position: relative;
-}
-
 .nav-list__item--current {
   color: #766357;
+}
+
+@media (min-width: $tablet-width) {
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: static;
+  }
+
+  .nav-list__item {
+    width: 153px;
+  }
+
+  .nav-list__link {
+    padding-top: 18px;
+    padding-bottom: 17px;
+    background-color: #ffffff;
+    color: #000000;
+  }
 }

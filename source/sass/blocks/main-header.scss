@@ -1,4 +1,12 @@
 .main-header {
   max-height: 56px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
+
+@media (min-width: $tablet-width) {
+  .main-header__logo {
+    height: 96px;
+  }
+}
+
