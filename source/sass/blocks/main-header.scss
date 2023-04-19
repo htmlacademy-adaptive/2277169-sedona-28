@@ -11,3 +11,9 @@
     width: 20%;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .main-header {
+    width: 1200px;
+  }
+}

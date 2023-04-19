@@ -36,3 +36,10 @@
   line-height: 21px;
   text-align: right;
 }
+
+@media (min-width: $tablet-width) {
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

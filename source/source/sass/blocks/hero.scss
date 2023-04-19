@@ -1,0 +1,17 @@
+.hero {
+  background-color: #756157;
+  background-image: url("../img/intro-triangle.svg"), url("../img/picture/hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero__image {
+  margin-top: 90px;
+  margin-bottom: 79px;
+}
+
+.hero__image--catalog {
+  margin-top: 52px;
+  margin-bottom: 63px;
+}

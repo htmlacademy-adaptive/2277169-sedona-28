@@ -1,0 +1,21 @@
+@media (min-width: $desktop-width) {
+  .video {
+    background-color: #ffffff;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .video__container {
+    padding: 58px 161px 66px;
+  }
+}
+
+.video__wrapper {
+  position: relative;
+}
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}

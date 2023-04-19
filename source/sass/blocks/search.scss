@@ -19,3 +19,9 @@
   margin: 0;
   margin-bottom: 22px;
 }
+
+@media (min-width: $desktop-width) {
+  .search {
+    background-color: #ffffff;
+  }
+}

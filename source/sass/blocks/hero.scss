@@ -15,3 +15,9 @@
   margin-top: 52px;
   margin-bottom: 63px;
 }
+
+@media (min-width: $desktop-width) {
+  .hero {
+    max-width: 1200px;
+  }
+}

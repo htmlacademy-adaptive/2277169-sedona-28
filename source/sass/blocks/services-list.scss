@@ -20,3 +20,18 @@
   text-align: left;
   color: #333333;
 }
+
+@media (min-width: $tablet-width) {
+  .services-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-width: 768px;
+    padding: 0;
+  }
+
+  .services-list__item {
+    width: 33%;
+    min-width: 256px;
+  }
+}

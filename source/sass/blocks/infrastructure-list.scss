@@ -10,9 +10,6 @@
 
 .infrastructure-list__wrapper-ladder {
   padding: 68px 18px 40px;
-  background-image: url("../img/copy-ladder.svg");
-  background-position: top;
-  background-repeat: no-repeat;
 }
 
 .infrastructure-list__wrapper {
@@ -36,4 +33,39 @@
 
 .infrastructure-list__item--small {
   padding: 22px 18px 27px;
+}
+
+@media (min-width: $tablet-width) {
+  .infrastructure-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    min-width: 768px;
+  }
+
+  .infrastructure-list__item {
+    width: 33%;
+    min-width: 256px;
+  }
+
+  .infrastructure-list__item--bg-primary {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    min-width: 768px;
+  }
+
+  .infrastructure-list__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    min-width: 256px;
+  }
+
+  .infrastructure-list__image {
+    width: 67%;
+    height: 256px;
+  }
 }

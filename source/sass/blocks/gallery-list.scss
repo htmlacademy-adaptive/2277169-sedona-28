@@ -23,3 +23,12 @@
   padding-left: 37px;
   font-weight: 700;
 }
+
+
+@media (min-width: $tablet-width) {
+  .gallery-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 648px;
+  }
+}
