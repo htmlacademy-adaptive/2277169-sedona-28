@@ -1,3 +1,21 @@
 .gallery-list {
   @include list-reset;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.gallery-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .gallery-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 648px;
+  }
 }

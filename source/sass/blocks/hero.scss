@@ -4,10 +4,20 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 320px;
 }
 
 .hero__image {
   margin-top: 90px;
-  margin-bottom: 85px;
+  margin-bottom: 79px;
+}
+
+.hero__image--catalog {
+  margin-top: 52px;
+  margin-bottom: 63px;
+}
+
+@media (min-width: $desktop-width) {
+  .hero {
+    max-width: 1200px;
+  }
 }

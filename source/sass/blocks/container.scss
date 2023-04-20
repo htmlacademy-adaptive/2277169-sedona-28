@@ -1,0 +1,19 @@
+.container {
+  margin: 0 auto;
+}
+
+.container--design {
+  background-color: #ffffff;
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    width: 1280px;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+
+  .container--design {
+    background-color: #e7e5e5;
+  }
+}

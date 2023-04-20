@@ -1,0 +1,45 @@
+.form__wrapper {
+  @include list-reset;
+  border: none;
+}
+
+.form {
+  padding-top: 24px;
+}
+
+.form__title {
+  margin-bottom: 20px;
+}
+
+.form__comment {
+  width: 279px;
+  min-height: 150px;
+  border: none;
+  background-color: #f2f2f2;
+  padding: 16px;
+  margin-bottom: 56px;
+}
+
+.form__comment::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.form__button {
+  background-color: $base-color;
+  color: #ffffff;
+  padding: 16px 49px;
+}
+
+.form__required-text {
+  color: rgba(51, 51, 51, 0.6);
+  font-size: 12px;
+  line-height: 21px;
+  text-align: right;
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

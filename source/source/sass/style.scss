@@ -1,0 +1,36 @@
+// Начните писать стили здесь
+
+// Базовые стили
+
+@import "./base/base.scss";
+@import "./base/fonts.scss";
+@import "./base/visually-hidden.scss";
+
+// Добавляем миксины и переменные
+
+@import "./mixins.scss";
+@import "./variables.scss";
+
+// Стили страниц
+
+@import "./blocks/page.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/nav-list.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/title.scss";
+@import "./blocks/text.scss";
+@import "./blocks/infrastructure-list.scss";
+@import "./blocks/services-list.scss";
+@import "./blocks/search.scss";
+@import "./blocks/map.scss";
+@import "./blocks/button.scss";
+@import "./blocks/main-footer.scss";
+@import "./blocks/social-list.scss";
+@import "./blocks/gallery-list.scss";
+@import "./blocks/gallery.scss";
+@import "./blocks/form-list.scss";
+@import "./blocks/form.scss";
+@import "./blocks/review.scss";
+@import "./blocks/container.scss";

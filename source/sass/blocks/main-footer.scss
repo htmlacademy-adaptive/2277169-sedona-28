@@ -1,0 +1,22 @@
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  padding: 33px 18px;
+  gap: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 36px 60px;
+    align-items: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-footer {
+    padding: 36px 120px;
+    background-color: #ffffff;
+  }
+}

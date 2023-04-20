@@ -3,18 +3,19 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
-  <div class="container container-design">
+  <div class="container container--design">
     <header class="main-header">
       <a class="main-header__logo">
         <img class="main-header__logo-image" src="img/logotype-phone-icon.svg" alt="Логотип города Седона" width="185"
           height="96">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--close main-nav--nojs">
         <button class="main-nav__toggle button" type="button">
           <span class="visually-hidden">
             Открыть меню
@@ -26,24 +27,24 @@
         </button>
         <ul class="main-nav__list nav-list">
           <li class="nav-list__item nav-list__item--current">
-            <a class="nav-list__link nav-list__link--mobile">Главная</a>
+            <a class="nav-list__link">Главная</a>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__link nav-list__link--mobile" href="catalog.html">Фото и видео</a>
+            <a class="nav-list__link" href="catalog.html">Фото и видео</a>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__link nav-list__link--mobile" href="form.html">Форма отзыва</a>
+            <a class="nav-list__link" href="form.html">Форма отзыва</a>
           </li>
           <li class="nav-list__item">
             <a class="nav-list__link nav-list__link--mobile" href="#">HTML academy</a>
           </li>
         </ul>
-        <button class="main-nav__toggle button" type="button">
+        <button class="main-nav__toggle main-nav__toggle--close button" type="button">
           <span class="visually-hidden">
             Закрыть меню
           </span>
-          <svg class="main-nav__toggle-image" xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="none"
-            viewBox="0 0 23 23">
+          <svg class="main-nav__toggle-image main-nav__toggle-image--close" xmlns="http://www.w3.org/2000/svg"
+            width="23" height="23" fill="none" viewBox="0 0 23 23">
             <path fill="#fff"
               d="M22.2 2.8 19.4 0l-8.3 8.3L2.8 0 0 2.8l8.3 8.3L0 19.4l2.8 2.8 8.3-8.3 8.3 8.3 2.8-2.8-8.3-8.3 8.3-8.3Z" />
           </svg>
@@ -68,22 +69,21 @@
           </p>
         </div>
         <ul class="advantages__list infrastructure-list">
-          <li class="infrastructure-list__item infrastructure-list__item--theme-blue">
-            <div class="infrastructure-list__wrapper-ladder">
+          <li class="infrastructure-list__item infrastructure-list__item--bg-primary">
+            <div class="infrastructure-list__wrapper infrastructure-list__wrapper-ladder">
               <h3 class="infrastructure-list__title title">Настоящий городок</h3>
               <span class="infrastructure-list__number">— №1 —</span>
-              <p class="infrastructure-list__description text">Седона не аттракцион для туристов, там течет своя
+              <p class="infrastructure-list__description text text--light">Седона не аттракцион для туристов, там
+                течет своя
                 жизнь
               </p>
             </div>
             <img class="infrastructure-list__image" src="img/picture/photo-city-mobile.jpg"
               alt="Городская инфраструктура" width="320" height="260">
-          </li>
-          <li class="infrastructure-list__item">
-            <ul class="advantages__list services-list">
+            <ul class="infrastructure-list__items services-list">
               <li class="services-list__item">
                 <h3 class="services-list__title title">Жилье</h3>
-                <p class="services-list__description text">Рекомендуем пожить в настоящем мотеле, все как в
+                <p class="services-list__description text">Рекомендуем пожить в<br> настоящем мотеле, все как в<br>
                   кино!
                 </p>
               </li>
@@ -100,11 +100,12 @@
               </li>
             </ul>
           </li>
-          <li class="infrastructure-list__item infrastructure-list__item--theme-blue">
+          <li class="infrastructure-list__item infrastructure-list__item--bg-primary">
             <div class="infrastructure-list__wrapper">
               <h3 class="infrastructure-list__title title">Там есть Мост дьявола</h3>
               <span class="infrastructure-list__number">— №2 —</span>
-              <p class="infrastructure-list__description text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+              <p class="infrastructure-list__description text text--light">Да, по нему можно пройти! Если вы
+                осмелитесь, конечно</p>
             </div>
             <img class="infrastructure-list__image" src="img/picture/bridge-mobile.jpg" alt="Мост в горах" width="320"
               height="260">
@@ -112,7 +113,7 @@
           <li class="infrastructure-list__item infrastructure-list__item--small">
             <h3 class="infrastructure-list__title title">Небольшая площадь</h3>
             <span class="infrastructure-list__number">— №3 —</span>
-            <p class="infrastructure-list__description text">Все интересные места находятся очень близко</p>
+            <p class="infrastructure-list__description text">Все интересные места находятся<br> очень близко</p>
           </li>
           <li class="infrastructure-list__item infrastructure-list__item--small">
             <h3 class="infrastructure-list__title title">Красивая дорога</h3>
@@ -136,30 +137,62 @@
       </section>
       <div class="map">
         <img class="map__image" src="img/picture/map-mobile-picture.jpg" alt="Карта" width="320" height="350">
-        <button class="map__button button" type="button">
+        <button class="map__button" type="button">
           <span class="visually-hidden">Вы здесь</span>
         </button>
       </div>
     </main>
     <footer class="main-footer">
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
-      <span class="main-footer__title">#visitSEDONA</span>
-      <ul class="social-list">
+      <span class="main-footer__title title">#visitSEDONA</span>
+      <ul class="main-footer__list social-list">
         <li class="social-list__item">
           <span class="visually-hidden">Мы в ВКонтакте</span>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
+              <path fill="#81B3D2" d="M0 0h48v48H0z" />
+              <g clip-path="url(#a)">
+                <path fill="#fff" fill-rule="evenodd"
+                  d="M35.45 17.95c.17-.55 0-.95-.8-.95h-2.62c-.67 0-.98.35-1.14.73 0 0-1.34 3.2-3.23 5.27-.61.6-.89.8-1.22.8-.17 0-.42-.2-.42-.74v-5.11c0-.66-.18-.95-.74-.95h-4.13c-.42 0-.67.3-.67.6 0 .61.95.76 1.05 2.5v3.8c0 .84-.16.99-.5.99-.88 0-3.05-3.21-4.33-6.89-.25-.71-.5-1-1.17-1H12.9c-.75 0-.9.35-.9.73 0 .68.89 4.07 4.14 8.55 2.18 3.06 5.23 4.72 8.01 4.72 1.67 0 1.88-.37 1.88-1v-2.32c0-.73.16-.88.68-.88.4 0 1.06.2 2.62 1.67C31.11 30.22 31.4 31 32.41 31h2.62c.75 0 1.13-.37.91-1.1-.24-.72-1.09-1.77-2.21-3.02-.62-.7-1.53-1.47-1.81-1.86-.4-.49-.28-.7 0-1.14 0 0 3.2-4.43 3.53-5.93Z"
+                  clip-rule="evenodd" />
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M12 12h24v24H12z" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
         </li>
         <li class="social-list__item">
           <span class="visually-hidden">Мы в Телеграм</span>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
+              <path fill="#81B3D2" d="M0 0h48v48H0z" />
+              <path fill="#fff"
+                d="m34.44 16.62-3.17 14.95c-.24 1.05-.86 1.31-1.75.82l-4.83-3.56-2.33 2.24c-.25.26-.47.47-.97.47l.35-4.91 8.95-8.09c.39-.35-.09-.54-.6-.2l-11.07 6.97-4.76-1.49c-1.04-.32-1.05-1.03.22-1.53l18.62-7.18c.87-.32 1.62.2 1.34 1.51Z" />
+            </svg>
+          </a>
         </li>
         <li class="social-list__item">
           <span class="visually-hidden">Мы в Youtube</span>
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
+              <path fill="#81B3D2" d="M0 0h48v48H0z" />
+              <path fill="#fff"
+                d="M31.18 17H16.81c-1.5 0-2.81 1.3-2.81 2.8v8.3c0 1.6 1.3 2.9 2.81 2.9h14.37A2.8 2.8 0 0 0 34 28.2v-8.4c.1-1.5-1.2-2.8-2.8-2.8ZM21.03 27.4v-6.8l6.84 3.4-6.84 3.4Z" />
+            </svg>
+          </a>
         </li>
       </ul>
-      <div class="main-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-          <span class="copyright__description">Разработано</span>
-        </a>
-      </div>
+      <a class="main-footer__link copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+        <span class="copyright__description">Разработано</span>
+        <svg class="copyright__image" xmlns="http://www.w3.org/2000/svg" width="27" height="35" fill="none"
+          viewBox="0 0 27 35">
+          <path fill="#000"
+            d="M13.65.45h-.1L.05 1.85v24.7l13.5 8 13.4-8V1.85L13.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z" />
+        </svg>
+      </a>
     </footer>
   </div>
 </body>

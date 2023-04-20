@@ -10,6 +10,7 @@
   margin-bottom: 16px;
   text-align: left;
   padding-left: 65px;
+  color: #000000;
 }
 
 .services-list__description {
@@ -20,3 +21,17 @@
   color: #333333;
 }
 
+@media (min-width: $tablet-width) {
+  .services-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-width: 768px;
+    padding: 0;
+  }
+
+  .services-list__item {
+    width: 33%;
+    min-width: 256px;
+  }
+}
