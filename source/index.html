@@ -15,19 +15,15 @@
         <img class="main-header__logo-image" src="img/logotype-phone-icon.svg" alt="Логотип города Седона" width="185"
           height="96">
       </a>
-      <nav class="main-nav main-nav--close main-nav--nojs">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle button" type="button">
           <span class="visually-hidden">
             Открыть меню
           </span>
-          <svg class="main-nav__toggle-image" xmlns="http://www.w3.org/2000/svg" width="23" height="22" fill="none"
-            viewBox="0 0 23 22">
-            <path fill="#81B3D2" d="M22.9 0H0v4h22.9V0ZM22.9 9H0v4h22.9V9ZM22.9 18H0v4h22.9v-4Z" />
-          </svg>
         </button>
         <ul class="main-nav__list nav-list">
-          <li class="nav-list__item nav-list__item--current">
-            <a class="nav-list__link">Главная</a>
+          <li class="nav-list__item">
+            <a class="nav-list__link nav-list__link--current">Главная</a>
           </li>
           <li class="nav-list__item">
             <a class="nav-list__link" href="catalog.html">Фото и видео</a>
@@ -39,16 +35,6 @@
             <a class="nav-list__link nav-list__link--mobile" href="#">HTML academy</a>
           </li>
         </ul>
-        <button class="main-nav__toggle main-nav__toggle--close button" type="button">
-          <span class="visually-hidden">
-            Закрыть меню
-          </span>
-          <svg class="main-nav__toggle-image main-nav__toggle-image--close" xmlns="http://www.w3.org/2000/svg"
-            width="23" height="23" fill="none" viewBox="0 0 23 23">
-            <path fill="#fff"
-              d="M22.2 2.8 19.4 0l-8.3 8.3L2.8 0 0 2.8l8.3 8.3L0 19.4l2.8 2.8 8.3-8.3 8.3 8.3 2.8-2.8-8.3-8.3 8.3-8.3Z" />
-          </svg>
-        </button>
       </nav>
     </header>
     <main class="main-container">
@@ -78,22 +64,31 @@
                 жизнь
               </p>
             </div>
-            <img class="infrastructure-list__image" src="img/picture/photo-city-mobile.jpg"
-              alt="Городская инфраструктура" width="320" height="260">
+            <div class="infrastructure-list__wrapper-image">
+              <picture>
+                <source media="(min-width: 1280px)"
+                  srcset="img/picture/city-desktop@1x.jpg 1x, img/picture/city-desktop@2x.jpg 2x" width="800"
+                  height="256">
+                <source media="(min-width: 768px)"
+                  srcset="img/picture/city-tablet@1x.jpg 1x, img/picture/city-tablet@2x.jpg 2x" width="512"
+                  height="256">
+                <img class="infrastructure-list__image" src="img/picture/city@1x.jpg"
+                  srcset="img/picture/city@2x.jpg 2x" alt="Настоящий городок" width="320" height="260">
+              </picture>
+            </div>
             <ul class="infrastructure-list__items services-list">
-              <li class="services-list__item">
+              <li class="services-list__item services-list__item--housing">
                 <h3 class="services-list__title title">Жилье</h3>
                 <p class="services-list__description text">Рекомендуем пожить в<br> настоящем мотеле, все как в<br>
                   кино!
                 </p>
               </li>
-              <li class="services-list__item">
+              <li class="services-list__item services-list__item--burger">
                 <h3 class="services-list__title title">Еда</h3>
-                <p class="services-list__description text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы не
-                  разочаруетесь!
+                <p class="services-list__description text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы не разочаруетесь!
                 </p>
               </li>
-              <li class="services-list__item">
+              <li class="services-list__item services-list__item--souvenirs">
                 <h3 class="services-list__title title">Сувениры</h3>
                 <p class="services-list__description text">Не только китайского, но и местного производства!
                 </p>
@@ -102,13 +97,23 @@
           </li>
           <li class="infrastructure-list__item infrastructure-list__item--bg-primary">
             <div class="infrastructure-list__wrapper">
-              <h3 class="infrastructure-list__title title">Там есть Мост дьявола</h3>
+              <h3 class="infrastructure-list__title title">Там есть<br> Мост дьявола</h3>
               <span class="infrastructure-list__number">— №2 —</span>
               <p class="infrastructure-list__description text text--light">Да, по нему можно пройти! Если вы
                 осмелитесь, конечно</p>
             </div>
-            <img class="infrastructure-list__image" src="img/picture/bridge-mobile.jpg" alt="Мост в горах" width="320"
-              height="260">
+            <div class="infrastructure-list__wrapper-image infrastructure-list__wrapper-image--reverse">
+              <picture>
+                <source media="(min-width: 1280px)"
+                  srcset="img/picture/bridge-desktop@1x.jpg 1x, img/picture/bridge-desktop@2x.jpg 2x" width="800"
+                  height="256">
+                <source media="(min-width: 768px)"
+                  srcset="img/picture/bridge-tablet@1x.jpg 1x, img/picture/bridge-tablet@2x.jpg 2x" width="512"
+                  height="256">
+                <img class="infrastructure-list__image" src="img/picture/bridge@1x.jpg"
+                  srcset="img/picture/bridge@2x.jpg 2x" alt="Мост в горах" width="320" height="260">
+              </picture>
+            </div>
           </li>
           <li class="infrastructure-list__item infrastructure-list__item--small">
             <h3 class="infrastructure-list__title title">Небольшая площадь</h3>
@@ -130,14 +135,22 @@
       <section class="search">
         <div class="search__container">
           <h2 class="search__title title">Заинтересовались?</h2>
-          <p class="search__description text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
+          <p class="search__description text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие
+            предложения
             гостиниц в седоне</p>
         </div>
         <button class="search__button button" type="button">Найти гостиницу</button>
       </section>
       <div class="map">
-        <img class="map__image" src="img/picture/map-mobile-picture.jpg" alt="Карта" width="320" height="350">
-        <button class="map__button" type="button">
+        <picture>
+          <source media="(min-width: 1280px)"
+            srcset="img/picture/map-desktop@1x.jpg 1x, img/picture/map-desktop@1x.jpg 2x" width="1200" height="350">
+          <source media="(min-width: 768px)" srcset="img/picture/map-tablet@1x.jpg 1x, img/picture/map-tablet@1x.jpg 2x"
+            width="768" height="350">
+          <img class="map__image" src="img/picture/map@1x.jpg" srcset="img/picture/map@2x.jpg 2x" alt="Карта"
+            width="320" height="350">
+        </picture>
+        <button class="map__button button" type="button">
           <span class="visually-hidden">Вы здесь</span>
         </button>
       </div>
@@ -195,6 +208,7 @@
       </a>
     </footer>
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>

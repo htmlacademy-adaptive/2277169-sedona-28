@@ -4,13 +4,12 @@
   flex-direction: column;
 }
 
-@media (min-width: $tablet-width) {
-  .main-header__logo {
-    width: 20%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-  }
+.main-header__logo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  height: 96px;
+  width: 185px;
 }
 
 @media (min-width: $desktop-width) {

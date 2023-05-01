@@ -1,5 +1,7 @@
 .search__container {
   padding: 38px 29px 32px;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .search__container--catalog {
@@ -18,10 +20,44 @@
 .search__title {
   margin: 0;
   margin-bottom: 22px;
+  font-size: 21px;
+}
+
+.search__description br {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .search__container {
+    padding: 60px 0 44px;
+    max-width: 435px;
+  }
+
+  .search__title {
+    font-size: 30px;
+    margin-bottom: 34px;
+  }
+
+  .search__button {
+    margin-bottom: 55px;
+    min-width: 458px;
+  }
+
+  .search__description br {
+    display: inline;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .search {
     background-color: #ffffff;
+  }
+
+  .search__title {
+    line-height: 27px;
+  }
+
+  .search__button {
+    margin-bottom: 66px;
   }
 }

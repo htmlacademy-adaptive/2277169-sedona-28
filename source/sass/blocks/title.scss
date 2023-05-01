@@ -4,3 +4,10 @@
   line-height: 26px;
   mix-blend-mode: normal;
 }
+
+@media (min-width: $tablet-width) {
+  .title {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}

@@ -5,10 +5,27 @@
 
 .advantages__container {
   padding: 32px 18px 16px;
+  margin: 0 auto;
+}
+
+.advantages {
+  background-color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages__container {
+    padding: 47px 0 55px;
+    max-width: 520px;
+  }
+
+  .advantages__title {
+    margin-bottom: 30px;
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .advantages {
-    background-color: #ffffff;
+  .advantages__container {
+    max-width: 484px;
+    padding: 59px 0 44px;
   }
 }

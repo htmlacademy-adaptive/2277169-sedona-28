@@ -10,20 +10,43 @@
 
 .infrastructure-list__wrapper-ladder {
   padding: 68px 18px 40px;
+  grid-row: 1 / -1;
+}
+
+.infrastructure-list__wrapper-image {
+  grid-column: 2 / -1;
+  grid-row: 1 / -1;
+}
+
+.infrastructure-list__image {
+  object-fit: cover;
+  width: 100%;
 }
 
 .infrastructure-list__wrapper {
-  padding: 37px 18px;
+  padding: 33px 18px 38px;
 }
 
 .infrastructure-list__item {
   display: flex;
   flex-direction: column;
+
+  &:first-child::before {
+    content: "";
+    background-image: url("../img/copy-ladder.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    min-height: 37px;
+  }
 }
 
 .infrastructure-list__title {
   margin: 0;
   margin-bottom: 12px;
+
+  & br {
+    display: none;
+  }
 }
 
 .infrastructure-list__number {
@@ -44,15 +67,30 @@
     min-width: 768px;
   }
 
+  .infrastructure-list__item:first-child::before {
+    display: none;
+  }
+
   .infrastructure-list__item {
     width: 33%;
     min-width: 256px;
   }
 
+  .infrastructure-list__title {
+    margin-bottom: 13px;
+
+    & br {
+      display: inline;
+    }
+  }
+
+  .infrastructure-list__number {
+    margin-bottom: 24px;
+  }
+
   .infrastructure-list__item--bg-primary {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
     min-width: 768px;
   }
@@ -60,12 +98,54 @@
   .infrastructure-list__wrapper {
     display: flex;
     flex-direction: column;
-    width: 33%;
-    min-width: 256px;
+    justify-content: center;
+    max-width: 190px;
+    margin: 0 auto;
+    padding: 52px 0 31px;
   }
 
-  .infrastructure-list__image {
-    width: 67%;
-    height: 256px;
+  .infrastructure-list__wrapper-image--reverse {
+    grid-column: 1 / 3;
+    grid-row: 1/-1;
+  }
+
+  .infrastructure-list__item--small {
+    padding: 41px 33px;
+    max-width: 190px;
+    margin: 0 auto;
+
+    & .infrastructure-list__title {
+      padding: 0 35px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .infrastructure-list__item--bg-primary {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .infrastructure-list__title {
+    margin-bottom: 13px;
+    padding: 0 52px;
+
+    & br {
+      display: inline;
+    }
+  }
+
+  .infrastructure-list__wrapper {
+    max-width: 300px;
+    padding: 0;
+  }
+
+  .infrastructure-list__item--small {
+    padding: 51px 0;
+    max-width: 300px;
+    margin: 0 auto;
+
+    & .infrastructure-list__title {
+      padding: 0 72px;
+    }
   }
 }
