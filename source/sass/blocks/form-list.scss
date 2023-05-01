@@ -1,6 +1,5 @@
 .form-list {
   @include list-reset;
-  margin-bottom: 39px;
 }
 
 .form-list__item {
@@ -9,11 +8,16 @@
   align-items: flex-start;
   margin-bottom: 16px;
   width: 280px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form-list__subtitle {
   color: #333333;
-  margin-left: 16px;
+  padding-left: 16px;
 }
 
 .form-list__input {
@@ -33,6 +37,7 @@
   flex-direction: row;
   align-items: center;
   width: 280px;
+  margin: 15px auto;
 }
 
 .form-list__input--contacts::placeholder {
@@ -48,4 +53,97 @@
   width: 218px;
   text-align: left;
   font-weight: 700;
+  position: relative;
+  display: block;
+  min-width: 280px;
+  min-height: 46px;
+  padding-left: 62px;
+}
+
+.form-list__control-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  background: #f2f2f2;
+  border-radius: 4px;
+}
+
+.form-list__control-mark--circle {
+  border-radius: 50%;
+}
+
+.form-list__input[type="radio"]:checked + .form-list__control-mark::before {
+  background: #3f5e72;
+  border-radius: 20px;
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-list__control {
+  padding: 13px 0;
+  min-width: 218px;
+  display: block;
+  text-transform: none;
+  font-size: 18px;
+}
+
+.form-list__input[type="checkbox"]:checked + .form-list__control-mark::before {
+  background-image: url("../img/tick-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+  width: 22px;
+  height: 16px;
+  position: absolute;
+  top: 14px;
+  left: 11px;
+}
+
+.form-list__button {
+  position: absolute;
+  right: 0;
+  top: 21px;
+  background-color: #e6e6e6;
+  display: block;
+  width: 58px;
+  height: 58px;
+  border: none;
+  padding: 0;
+}
+
+.form-list__button--phone::after {
+  background-image: url("../img/phone-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-list__button--mail::after {
+  background-image: url("../img/mail-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-list__input--contacts {
+  width: 222px;
 }

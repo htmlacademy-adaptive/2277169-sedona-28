@@ -19,12 +19,14 @@
 }
 
 .infrastructure-list__image {
-  object-fit: cover;
   width: 100%;
+  height: 260px;
 }
 
 .infrastructure-list__wrapper {
-  padding: 33px 18px 38px;
+  padding: 33px 0 38px;
+  width: 284px;
+  margin: 0 auto;
 }
 
 .infrastructure-list__item {
@@ -35,7 +37,7 @@
     content: "";
     background-image: url("../img/copy-ladder.svg");
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: 100% 37px;
     min-height: 37px;
   }
 }
@@ -117,6 +119,10 @@
     & .infrastructure-list__title {
       padding: 0 35px;
     }
+  }
+
+  .infrastructure-list__image {
+    height: 256px;
   }
 }
 
