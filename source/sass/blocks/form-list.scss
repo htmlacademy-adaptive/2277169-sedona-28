@@ -7,7 +7,6 @@
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 16px;
-  width: 280px;
   position: relative;
 
   &:last-child {
@@ -15,38 +14,14 @@
   }
 }
 
-.form-list__subtitle {
-  color: #333333;
-  padding-left: 16px;
-}
-
-.form-list__input {
-  width: 280px;
-  margin: 0;
-  background-color: #f2f2f2;
-  border: none;
-  min-height: 58px;
-  padding: 16px;
-}
-
-.form-list__input::placeholder {
-  color: #000000;
-}
-
 .form-list__item--row {
   flex-direction: row;
   align-items: center;
-  width: 280px;
-  margin: 15px auto;
 }
 
-.form-list__input--contacts::placeholder {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.form-list__input--size {
-  width: 46px;
-  height: 46px;
+.form-list__subtitle {
+  color: #333333;
+  padding-left: 16px;
 }
 
 .form-list__subtitle--size {
@@ -55,9 +30,31 @@
   font-weight: 700;
   position: relative;
   display: block;
-  min-width: 280px;
   min-height: 46px;
   padding-left: 62px;
+}
+
+.form-list__input {
+  margin: 0;
+  background-color: #f2f2f2;
+  border: none;
+  min-height: 58px;
+  padding: 16px;
+  font-family: $main-font;
+  width: 100%;
+}
+
+.form-list__input--size {
+  width: 46px;
+  height: 46px;
+}
+
+.form-list__input::placeholder {
+  color: #000000;
+}
+
+.form-list__input--contacts::placeholder {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .form-list__control-mark {
@@ -95,7 +92,7 @@
 }
 
 .form-list__input[type="checkbox"]:checked + .form-list__control-mark::before {
-  background-image: url("../img/tick-icon.svg");
+  background-image: url("../img/icons/tick-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   content: "";
@@ -119,7 +116,7 @@
 }
 
 .form-list__button--phone::after {
-  background-image: url("../img/phone-icon.svg");
+  background-image: url("../img/icons/phone-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   content: "";
@@ -132,7 +129,7 @@
 }
 
 .form-list__button--mail::after {
-  background-image: url("../img/mail-icon.svg");
+  background-image: url("../img/icons/mail-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   content: "";
@@ -145,5 +142,28 @@
 }
 
 .form-list__input--contacts {
-  width: 222px;
+  min-width: 222px;
+  padding-right: 72px;
+}
+
+@media (min-width: $tablet-width) {
+  .form-list__input {
+    font-size: 18px;
+  }
+
+  .form-list--primary {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0 36px;
+  }
+
+  .form-list__item--row {
+    margin: 0;
+    max-width: 280px;
+    width: 100%;
+  }
 }

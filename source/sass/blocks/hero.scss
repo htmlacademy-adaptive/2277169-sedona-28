@@ -13,7 +13,7 @@
 
 
   @media (min-width: $tablet-width) {
-    min-height: 518px;
+    height: 518px;
     background-size: cover;
   }
 
@@ -31,7 +31,7 @@
   height: 57px;
   width: 100%;
   display: block;
-  background-image: url("../img/hero-ladder.svg");
+  background-image: url("../img/icons/hero-ladder-icon.svg");
   background-repeat: no-repeat;
   background-size: 233% 57px;
   background-position: bottom;
@@ -55,24 +55,31 @@
   margin: 0 auto;
   margin-top: 52px;
   margin-bottom: 67px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 95px;
+    margin-bottom: 60px;
+    width: 457px;
+    height: 78px;
+  }
 }
 
 .hero--catalog {
   background-color: #756157;
-  background-image: url("../img/hero-ladder.svg"), url("../img/picture/bg-hero-catalog@1x.jpg");
+  background-image: url("../img/hero-ladder-icon.svg"), url("../img/picture/bg-hero-catalog@1x.jpg");
   background-repeat: no-repeat;
   background-size: 200% 47px, 100% 135%;
   background-position: bottom, bottom;
   height: 158px;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/hero-ladder.svg"), url("../img/picture/bg-hero-catalog@2x.jpg");
+    background-image: url("../img/hero-ladder-icon.svg"), url("../img/picture/bg-hero-catalog@2x.jpg");
     background-size: 200% 47px, 100% 135%;
   }
 
 
   @media (min-width: $tablet-width) {
-    min-height: 518px;
+    min-height: 290px;
     background-size: 100% 57px, 156% 100%;
   }
 
