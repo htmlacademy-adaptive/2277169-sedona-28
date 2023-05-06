@@ -1,53 +1,108 @@
+.main-nav {
+  width: auto;
+  z-index: 3;
+}
+
 .main-nav__toggle-image {
   background-color: #ffffff;
 }
 
-.main-nav__toggle-image--close {
-  background-color: $base-color;
-}
-
-.main-nav {
-  position: absolute;
-  width: 100%;
-}
-
 .main-nav__toggle {
   width: 23px;
-  height: 23px;
+  height: 22px;
   position: absolute;
+  z-index: 2;
   top: 17px;
   right: 19px;
-  padding: 0;
+  background-color: #ffffff;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-@media (min-width: $tablet-width) {
-  .main-nav__toggle {
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 23px;
+  height: 4px;
+  background-color: $base-color;
+  box-shadow: 0 10px 0 0 $base-color, 0 20px 0 0 $base-color;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade($base-color, 30%);
+  box-shadow:
+    0 10px 0 0 fade($base-color, 30%),
+    0 20px 0 0 fade($base-color, 30%);
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .nav-list {
     display: none;
   }
 
+  .main-nav--nojs {
+    .main-nav__toggle {
+      display: none;
+    }
+
+    .nav-list {
+      position: static;
+      display: block;
+      margin-top: 95px;
+    }
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -3px;
+    width: 28px;
+    height: 4px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(#ffffff, 60%);
+  }
+}
+
+@media (min-width: $tablet-width) {
   .main-nav {
     width: 100%;
+  }
+
+  .main-nav__toggle {
+    display: none;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .main-nav__toggle {
-    display: none;
-  }
-
   .main-nav {
     width: 1200px;
     position: static;
-    background-color: #ffffff;
   }
 }
-
-/*.main-nav--nojs {
-  .main-nav__toggle--close {
-    display: none;
-  }
-
-  .nav-list {
-    display: none;
-  }
-}*/

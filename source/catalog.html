@@ -6,57 +6,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
   <div class="container container--design">
     <header class="main-header">
       <a class="main-header__logo" href="index.html">
-        <img class="main-header__logo-image" src="img/logotype-phone-icon.svg" alt="Логотип города Седона" width="185"
+        <img class="main-header__logo-image" src="img/icons/logotype-icon.svg" alt="Логотип города Седона" width="185"
           height="96">
       </a>
-      <nav class="main-nav main-nav--close main-nav--nojs">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle button" type="button">
           <span class="visually-hidden">
             Открыть меню
           </span>
-          <svg class="main-nav__toggle-image" xmlns="http://www.w3.org/2000/svg" width="23" height="22" fill="none"
-            viewBox="0 0 23 22">
-            <path fill="#81B3D2" d="M22.9 0H0v4h22.9V0ZM22.9 9H0v4h22.9V9ZM22.9 18H0v4h22.9v-4Z" />
-          </svg>
         </button>
         <ul class="main-nav__list nav-list">
           <li class="nav-list__item">
-            <a class="nav-list__link nav-list__link" href="index.html">Главная</a>
-          </li>
-          <li class="nav-list__item nav-list__item--current">
-            <a class="nav-list__link nav-list__link">Фото и видео</a>
+            <a class="nav-list__link" href="index.html">Главная</a>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__link nav-list__link" href="form.html">Форма отзыва</a>
+            <a class="nav-list__link nav-list__link--current">Фото и видео</a>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__link nav-list__link" href="#">HTML academy</a>
+            <a class="nav-list__link" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">HTML academy</a>
           </li>
         </ul>
-        <button class="main-nav__toggle main-nav__toggle--close button" type="button">
-          <span class="visually-hidden">
-            Закрыть меню
-          </span>
-          <svg class="main-nav__toggle-image main-nav__toggle-image--close" xmlns="http://www.w3.org/2000/svg"
-            width="23" height="23" fill="none" viewBox="0 0 23 23">
-            <path fill="#fff"
-              d="M22.2 2.8 19.4 0l-8.3 8.3L2.8 0 0 2.8l8.3 8.3L0 19.4l2.8 2.8 8.3-8.3 8.3 8.3 2.8-2.8-8.3-8.3 8.3-8.3Z" />
-          </svg>
-        </button>
       </nav>
     </header>
     <main class="main-container">
       <h1 class="visually-hidden">Горный курорт Седона</h1>
-      <section class="hero">
+      <section class="hero hero--catalog">
         <div class="hero__wrapper">
           <h2 class="visually-hidden">Приглашаем Вас</h2>
-          <img class="hero__image hero__image--catalog" src="img/sedona-catalog.svg" alt="Добро пожаловать в Седону">
+          <img class="hero__image hero__image--catalog" src="img/icons/sedona-catalog-icon.svg"
+            alt="Добро пожаловать в Седону">
         </div>
       </section>
       <section class="gallery">
@@ -67,8 +58,16 @@
         </div>
         <ul class="gallery__list gallery-list">
           <li class="gallery-list__item gallery-item">
-            <img class="gallery-item__image" src="img/picture/catalog-mobile-sunset.jpg" alt="Закат" width="280"
-              height="280">
+            <picture>
+              <source media="(min-width: 1280px)"
+                srcset="img/picture/catalog-sunset-desktop@1x.jpg 1x, img/picture/catalog-sunset-desktop@2x.jpg 2x"
+                width="1200" height="400">
+              <source media="(min-width: 768px)"
+                srcset="img/picture/catalog-sunset-tablet@1x.jpg 1x, img/picture/catalog-sunset-tablet@2x.jpg 2x"
+                width="648" height="400">
+              <img class="gallery-item__image" src="img/picture/catalog-sunset@1x.jpg"
+                srcset="img/picture/catalog-sunset@2x.jpg 2x" alt="Закат" width="280" height="280">
+            </picture>
             <div class="gallery-item__wrapper">
               <h3 class="gallery-item__title">Неродные просторы</h3>
               <p class="gallery-item__description text">Автор фото: Борис</p>
@@ -83,8 +82,16 @@
             </div>
           </li>
           <li class="gallery-list__item gallery-item">
-            <img class="gallery-item__image" src="img/picture/vegetation-mobile.jpg" alt="Закат" width="280"
-              height="280">
+            <picture>
+              <source media="(min-width: 1280px)"
+                srcset="img/picture/nature-desktop@1x.jpg 1x, img/picture/nature-desktop@2x.jpg 2x" width="400"
+                height="267">
+              <source media="(min-width: 768px)"
+                srcset="img/picture/nature-tablet@1x.jpg 1x, img/picture/nature-tablet@2x.jpg 2x" width="324"
+                height="267">
+              <img class="gallery-item__image" src="img/picture/nature@1x.jpg" srcset="img/picture/nature@2x.jpg 2x"
+                alt="Растение на фоне гор" width="280" height="280">
+            </picture>
             <div class="gallery-item__wrapper">
               <h3 class="gallery-item__title">Местная растительность</h3>
               <p class="gallery-item__description text">Автор фото: Сергей</p>
@@ -99,7 +106,15 @@
             </div>
           </li>
           <li class="gallery-list__item gallery-item gallery-item--another-color">
-            <img class="gallery-item__image" src="img/picture/road-mobile.jpg" alt="Закат" width="280" height="280">
+            <picture>
+              <source media="(min-width: 1280px)"
+                srcset="img/picture/road-desktop@1x.jpg 1x, img/picture/road-desktop@2x.jpg 2x" width="400"
+                height="267">
+              <source media="(min-width: 768px)"
+                srcset="img/picture/road-tablet@1x.jpg 1x, img/picture/road-tablet@2x.jpg 2x" width="324" height="267">
+              <img class="gallery-item__image" src="img/picture/road@1x.jpg" srcset="img/picture/road@2x.jpg 2x"
+                alt="Горная дорога" width="280" height="280">
+            </picture>
             <div class="gallery-item__wrapper">
               <h3 class="gallery-item__title">Дорога на север</h3>
               <p class="gallery-item__description text">Автор фото: Петр</p>
@@ -114,7 +129,16 @@
             </div>
           </li>
           <li class="gallery-list__item gallery-item">
-            <img class="gallery-item__image" src="img/picture/bridge-mobile.jpg" alt="Закат" width="280" height="280">
+            <picture>
+              <source media="(min-width: 1280px)"
+                srcset="img/picture/catalog-bridge-desktop@1x.jpg 1x, img/picture/catalog-bridge-desktop@2x.jpg 2x"
+                width="400" height="267">
+              <source media="(min-width: 768px)"
+                srcset="img/picture/catalog-bridge-tablet@1x.jpg 1x, img/picture/catalog-bridge-tablet@2x.jpg 2x"
+                width="324" height="267">
+              <img class="gallery-item__image" src="img/picture/catalog-bridge@1x.jpg"
+                srcset="img/picture/catalog-bridge@2x.jpg 2x" alt="Мост в горах" width="280" height="280">
+            </picture>
             <div class="gallery-item__wrapper">
               <h3 class="gallery-item__title title">Мост дьявола</h3>
               <p class="gallery-item__description text">Автор фото: Антон</p>
@@ -138,7 +162,16 @@
         </div>
         <div class="video__wrapper">
           <a class="video__link" href="#" target="_blank">
-            <img class="video__image" src="img/picture/video-mobile.jpg" alt="Горная дорога" width="280" height="177">
+            <picture>
+              <source media="(min-width: 1280px)"
+                srcset="img/picture/video-desktop@1x.jpg 1x, img/picture/video-desktop@2x.jpg 2x" width="800"
+                height="500">
+              <source media="(min-width: 768px)"
+                srcset="img/picture/video-tablet@1x.jpg 1x, img/picture/video-tablet@2x.jpg 2x" width="648"
+                height="500">
+              <img class="video__image" src="img/picture/video@1x.jpg" srcset="img/picture/video@2x.jpg 2x" alt="Видео"
+                width="280" height="177">
+            </picture>
           </a>
           <button class="video__button" type="button">
             <span class="visually-hidden">Воспроизвести</span>
@@ -199,6 +232,7 @@
       </a>
     </footer>
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,23 +1,89 @@
 .hero {
   background-color: #756157;
-  background-image: url("../img/intro-triangle.svg"), url("../img/picture/hero-mobile.jpg");
+  background-image: url("../img/picture/bg-hero-tablet@1x.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 768px 389px;
   background-position: center;
+  height: 389px;
+  position: relative;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/picture/bg-hero-tablet@2x.jpg");
+  }
+
+
+  @media (min-width: $tablet-width) {
+    height: 518px;
+    background-size: cover;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/picture/bg-hero-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/picture/bg-hero-desktop@2x.jpg");
+    }
+  }
+}
+
+.hero::after {
+  content: "";
+  height: 57px;
+  width: 100%;
+  display: block;
+  background-image: url("../img/icons/hero-ladder-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 233% 57px;
+  background-position: bottom;
+  position: absolute;
+  bottom: -1px;
 }
 
 .hero__image {
+  margin: 0 auto;
   margin-top: 90px;
   margin-bottom: 79px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 77px;
+    width: 461px;
+    height: 350px;
+  }
 }
 
 .hero__image--catalog {
+  margin: 0 auto;
   margin-top: 52px;
-  margin-bottom: 63px;
+  margin-bottom: 67px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 95px;
+    margin-bottom: 60px;
+    width: 457px;
+    height: 78px;
+  }
 }
 
-@media (min-width: $desktop-width) {
-  .hero {
-    max-width: 1200px;
+.hero--catalog {
+  background-color: #756157;
+  background-image: url("../img/hero-ladder-icon.svg"), url("../img/picture/bg-hero-catalog@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 200% 47px, 100% 135%;
+  background-position: bottom, bottom;
+  height: 158px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero-ladder-icon.svg"), url("../img/picture/bg-hero-catalog@2x.jpg");
+    background-size: 200% 47px, 100% 135%;
+  }
+
+
+  @media (min-width: $tablet-width) {
+    min-height: 290px;
+    background-size: 100% 57px, 156% 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: 100% 57px, 100% 100%;
   }
 }

@@ -4,12 +4,18 @@
   flex-direction: column;
 }
 
+.main-header__logo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  height: 96px;
+  width: 185px;
+  z-index: 2;
+}
+
 @media (min-width: $tablet-width) {
   .main-header__logo {
-    width: 20%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+    z-index: 4;
   }
 }
 

@@ -6,24 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/icon.svg" type="img/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
   <div class="container container--design">
     <header class="main-header">
       <a class="main-header__logo" href="index.html">
-        <img class="main-header__logo-image" src="img/logotype-phone-icon.svg" alt="Логотип города Седона" width="185"
+        <img class="main-header__logo-image" src="img/icons/logotype-icon.svg" alt="Логотип города Седона" width="185"
           height="96">
       </a>
-      <nav class="main-nav main-nav--close main-nav--nojs">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle button" type="button">
           <span class="visually-hidden">
             Открыть меню
           </span>
-          <svg class="main-nav__toggle-image" xmlns="http://www.w3.org/2000/svg" width="23" height="22" fill="none"
-            viewBox="0 0 23 22">
-            <path fill="#81B3D2" d="M22.9 0H0v4h22.9V0ZM22.9 9H0v4h22.9V9ZM22.9 18H0v4h22.9v-4Z" />
-          </svg>
         </button>
         <ul class="main-nav__list nav-list">
           <li class="nav-list__item">
@@ -32,31 +32,22 @@
           <li class="nav-list__item">
             <a class="nav-list__link" href="catalog.html">Фото и видео</a>
           </li>
-          <li class="nav-list__item nav-list__item--current">
-            <a class="nav-list__link">Форма отзыва</a>
+          <li class="nav-list__item">
+            <a class="nav-list__link nav-list__link--current">Форма отзыва</a>
           </li>
           <li class="nav-list__item">
             <a class="nav-list__link" href="#">HTML academy</a>
           </li>
         </ul>
-        <button class="main-nav__toggle main-nav__toggle--close button" type="button">
-          <span class="visually-hidden">
-            Закрыть меню
-          </span>
-          <svg class="main-nav__toggle-image main-nav__toggle-image--close" xmlns="http://www.w3.org/2000/svg"
-            width="23" height="23" fill="none" viewBox="0 0 23 23">
-            <path fill="#fff"
-              d="M22.2 2.8 19.4 0l-8.3 8.3L2.8 0 0 2.8l8.3 8.3L0 19.4l2.8 2.8 8.3-8.3 8.3 8.3 2.8-2.8-8.3-8.3 8.3-8.3Z" />
-          </svg>
-        </button>
       </nav>
     </header>
     <main class="main-container">
       <h1 class="visually-hidden">Горный курорт Седона</h1>
-      <section class="hero">
+      <section class="hero hero--catalog">
         <div class="hero__wrapper">
           <h2 class="visually-hidden">Приглашаем Вас</h2>
-          <img class="hero__image" src="img/sedona-catalog.svg" alt="Добро пожаловать в Седону">
+          <img class="hero__image hero__image--catalog" src="img/icons/sedona-catalog-icon.svg"
+            alt="Добро пожаловать в Седону">
         </div>
       </section>
       <section class="review">
@@ -85,78 +76,107 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__wrapper">
+          <fieldset class="form__wrapper form__wrapper--primary">
             <legend class="form__title title">Контактная информация:</legend>
             <ul class="form__list form-list">
               <li class="form-list__item">
                 <label class="form-list__subtitle" for="number">Контактный телефон*:</label>
                 <input class="form-list__input form-list__input--contacts title" type="tel" name="phone"
                   placeholder="Введите телефон" id="number" required>
+                <button class="form-list__button form-list__button--phone button" type="button">
+                  <span class="visually-hidden">Позвонить</span>
+                </button>
               </li>
               <li class="form-list__item">
                 <label class="form-list__subtitle" for="email">Электронная почта*:</label>
                 <input class="form-list__input form-list__input--contacts title" type="email" name="email"
                   placeholder="Введите e-mail" id="email" required>
+                <button class="form-list__button form-list__button--mail button" type="button">
+                  <span class="visually-hidden">Написать сообщение</span>
+                </button>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__wrapper">
+          <fieldset class="form__wrapper form__wrapper--secondary">
             <legend class="form__title title">Ваше общее впечатление:</legend>
-            <ul class="form__list form-list">
+            <ul class="form__list form-list form-list--primary">
               <li class="form-list__item form-list__item--row">
-                <input class="form-list__input form-list__input--size" type="radio" name="rating" id="positive"
-                  value="positive" checked>
-                <label class="form-list__subtitle form-list__subtitle--size" for="positive">Скорее положительное</label>
+                <label class="form-list__subtitle form-list__subtitle--size">
+                  <input class="visually-hidden form-list__input form-list__input--size" type="radio" name="rating"
+                    value="positive" checked>
+                  <span class="form-list__control-mark form-list__control-mark--circle"></span>
+                  <span class="form-list__control">Скорее положительное</span>
+                </label>
               </li>
               <li class="form-list__item form-list__item--row">
-                <input class="form-list__input form-list__input--size" type="radio" name="rating" id="negative"
-                  value="negative">
-                <label class="form-list__subtitle form-list__subtitle--size" for="negative">Скорее отрицательное</label>
+                <label class="form-list__subtitle form-list__subtitle--size">
+                  <input class="visually-hidden form-list__input form-list__input--size" type="radio" name="rating"
+                    value="negative">
+                  <span class="form-list__control-mark form-list__control-mark--circle"></span>
+                  <span class="form-list__control">Скорее отрицательное</span>
+                </label>
               </li>
               <li class="form-list__item form-list__item--row">
-                <input class="form-list__input form-list__input--size" type="radio" name="rating" id="uncertain"
-                  value="uncertain">
-                <label class="form-list__subtitle form-list__subtitle--size" for="uncertain">Затрудняюсь
-                  ответить</label>
+                <label class="form-list__subtitle form-list__subtitle--size">
+                  <input class="visually-hidden form-list__input form-list__input--size" type="radio" name="rating"
+                    value="uncertain">
+                  <span class="form-list__control-mark form-list__control-mark--circle"></span>
+                  <span class="form-list__control">Затрудняюсь ответить</span>
+                </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__wrapper">
+          <fieldset class="form__wrapper form__wrapper--secondary">
             <legend class="form__title title">Посещенные достопримечательности:</legend>
-            <ul class="form__list form-list">
+            <ul class="form__list form-list form-list--primary">
               <li class="form-list__item form-list__item--row">
-                <input class="form-list__input form-list__input--size" type="checkbox" name="bridge" id="bridge"
-                  checked>
-                <label class="form-list__subtitle form-list__subtitle--size" for="bridge">Мост Дьявола</label>
+                <label class="form-list__subtitle form-list__subtitle--size">
+                  <input class="visually-hidden form-list__input form-list__input--size" type="checkbox" name="bridge"
+                    checked>
+                  <span class="form-list__control-mark"></span>
+                  <span class="form-list__control">Мост Дьявола</span>
+                </label>
               </li>
               <li class="form-list__item form-list__item--row">
-                <input class="form-list__input form-list__input--size" type="checkbox" name="mountain" id="mountain"
-                  checked>
-                <label class="form-list__subtitle form-list__subtitle--size" for="mountain">Гора-Колокол</label>
+                <label class="form-list__subtitle form-list__subtitle--size">
+                  <input class="visually-hidden form-list__input form-list__input--size" type="checkbox" name="mountain"
+                    checked>
+                  <span class="form-list__control-mark"></span>
+                  <span class="form-list__control">Гора-Колокол</span>
+                </label>
               </li>
               <li class="form-list__item form-list__item--row">
-                <input class="form-list__input form-list__input--size" type="checkbox" name="park" id="park" checked>
-                <label class="form-list__subtitle form-list__subtitle--size" for="park">Слайд-парк</label>
+                <label class="form-list__subtitle form-list__subtitle--size">
+                  <input class="visually-hidden form-list__input form-list__input--size" type="checkbox" name="park"
+                    checked>
+                  <span class="form-list__control-mark"></span>
+                  <span class="form-list__control">Слайд-парк</span>
+                </label>
               </li>
               <li class="form-list__item form-list__item--row">
-                <input class="form-list__input form-list__input--size" type="checkbox" name="rock" id="rock">
-                <label class="form-list__subtitle form-list__subtitle--size" for="rock">Красные скалы</label>
+                <label class="form-list__subtitle form-list__subtitle--size">
+                  <input class="visually-hidden form-list__input form-list__input--size" type="checkbox" name="rock">
+                  <span class="form-list__control-mark"></span>
+                  <span class="form-list__control">Красные скалы</span>
+                </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__wrapper">
+          <fieldset class="form__wrapper form__wrapper--secondary">
             <legend class="form__title title">Опишите свои эмоции:</legend>
             <textarea class="form__comment title" name="comment"
               placeholder="Опишите подробно все свои восторги "></textarea>
           </fieldset>
-          <button class="form__button button title" type="submit">Отправить отзыв</button>
-          <p class="form__required-text">* — обязательные поля</p>
+          <div class="form__container">
+            <button class="form__button button title" type="submit">Отправить отзыв</button>
+            <p class="form__required-text text">* — обязательные поля</p>
+          </div>
         </form>
       </section>
     </main>
     <footer class="main-footer">
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
-      <span class="main-footer__title">#visitSEDONA</span>
+      <span class="main-footer__title title">#visitSEDONA</span>
       <ul class="main-footer__list social-list">
         <li class="social-list__item">
           <span class="visually-hidden">Мы в ВКонтакте</span>
@@ -207,6 +227,7 @@
       </a>
     </footer>
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,32 @@
 .review {
-  padding: 36px 20px 28px;
+  padding: 36px 20px 22px;
   background-color: #ffffff;
 }
 
 .review__title {
   margin: 0;
+  margin-bottom: 24px;
+}
+
+.review__description {
+  margin: 0 auto;
+  margin-bottom: 28px;
+  max-width: 280px;
+}
+
+@media (min-width: $tablet-width) {
+  .review {
+    padding: 64px 0;
+  }
+
+  .review__title {
+    font-size: 30px;
+    margin-bottom: 21px;
+  }
+
+  .review__description {
+    max-width: 435px;
+    margin: 0 auto;
+    margin-bottom: 108px;
+  }
 }

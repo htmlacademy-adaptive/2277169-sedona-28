@@ -5,6 +5,10 @@
   gap: 30px;
 }
 
+.main-footer__title {
+  font-size: 21px;
+}
+
 @media (min-width: $tablet-width) {
   .main-footer {
     flex-direction: row;

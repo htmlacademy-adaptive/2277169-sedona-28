@@ -1,9 +1,22 @@
 .map {
   position: relative;
+  background-color: #ffffff;
 }
 
 .map__button {
   position: absolute;
   top: 50%;
   left: 50%;
+  background-image: url("../img/icons/map-marker-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 27px;
+  width: 27px;
+  height: 27px;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+
+.map__image {
+  width: 100%;
+  height: 350px;
 }

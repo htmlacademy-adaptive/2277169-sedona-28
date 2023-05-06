@@ -1,5 +1,9 @@
 .nav-list {
   @include list-reset;
+  position: absolute;
+  width: 100%;
+  background: $base-color;
+  min-height: 223px;
 }
 
 .nav-list__link {
@@ -10,29 +14,44 @@
   line-height: 26px;
   color: #ffffff;
   display: block;
-  background-color: $base-color;
   padding-top: 17px;
-  padding-bottom: 12px;
+  padding-bottom: 11px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(1, 1, 1, 0.2);
 }
 
 .nav-list__item--current {
   color: #766357;
 }
 
+.nav-list__item {
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  &:active {
+    background-color: $active-color;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .nav-list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     width: 100%;
     position: static;
+    min-height: 56px;
+    background-color: #ffffff;
   }
 
   .nav-list__item {
     width: 20%;
+    min-width: 153px;
   }
 
-  .nav-list__item:nth-child(3n) {
+  .nav-list__item:nth-child(4n+3) {
     margin-left: 20%;
   }
 
@@ -43,5 +62,24 @@
     color: #000000;
     font-size: 14px;
     line-height: 21px;
+    border: none;
+
+    &:hover {
+      color: $base-color;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .nav-list__link--current {
+    color: #766357;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nav-list__item {
+    min-width: 240px;
   }
 }

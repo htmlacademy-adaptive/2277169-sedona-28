@@ -2,12 +2,14 @@
   @include list-reset;
   background-color: #ffffff;
   padding-top: 23px;
-  padding-bottom: 13px;
+  padding-bottom: 22px;
+  grid-column: 1 / -1;
 }
 
 .services-list__title {
-  margin-top: 8px;
+  margin: 0;
   margin-bottom: 16px;
+  padding-top: 8px;
   text-align: left;
   padding-left: 65px;
   color: #000000;
@@ -15,10 +17,49 @@
 
 .services-list__description {
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 25px;
   padding-left: 65px;
   text-align: left;
   color: #333333;
+}
+
+.services-list__item--housing::before {
+  background-image: url("../img/icons/house-icon.svg");
+  background-repeat: no-repeat;
+  content: "";
+  background-size: 40px 40px;
+  background-position: left;
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 18px;
+}
+
+.services-list__item--burger::before {
+  background-image: url("../img/icons/burger-icon.svg");
+  background-repeat: no-repeat;
+  content: "";
+  background-size: 40px 40px;
+  background-position: left;
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 18px;
+}
+
+.services-list__item--souvenirs::before {
+  background-image: url("../img/icons/gift-icon.svg");
+  background-repeat: no-repeat;
+  content: "";
+  background-size: 40px 40px;
+  background-position: left;
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 18px;
 }
 
 @media (min-width: $tablet-width) {
@@ -30,8 +71,71 @@
     padding: 0;
   }
 
+  .services-list__title {
+    margin-top: 97px;
+    margin-bottom: 23px;
+    text-align: center;
+    padding: 0;
+  }
+
+  .services-list__description {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    & br {
+      display: none;
+    }
+  }
+
   .services-list__item {
     width: 33%;
     min-width: 256px;
+    padding: 60px 33px;
+    min-height: 331px;
+    position: relative;
+  }
+
+  .services-list__item--housing::before,
+  .services-list__item--burger::before,
+  .services-list__item--souvenirs::before {
+    content: "";
+    background-size: 77px 72px;
+    background-position: center;
+    width: 77px;
+    height: 72px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .services-list__item {
+    padding: 61px 43px;
+    max-height: 330px;
+    min-width: 256px;
+  }
+
+  .services-list__item--burger {
+    padding: 61px 50px;
+  }
+
+  .services-list__item--souvenirs {
+    padding: 58px 42px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .services-list__item {
+    padding: 72px 45px;
+    min-width: 400px;
+  }
+
+  .services-list__item--burger {
+    padding: 69px 57px;
+  }
+
+  .services-list__item--souvenirs {
+    padding: 74px 65px;
   }
 }

@@ -1,33 +1,61 @@
+.form {
+  padding-top: 25px;
+}
+
 .form__wrapper {
   @include list-reset;
   border: none;
+  padding-bottom: 64px;
+  position: relative;
+  min-width: 280px;
+
+  &::before {
+    content: "";
+    width: 100vw;
+    height: 1px;
+    display: block;
+    background-color: #e5e5e5;
+    position: absolute;
+    top: -71px;
+    left: -20px;
+  }
 }
 
-.form {
-  padding-top: 24px;
+.form__wrapper--primary {
+  padding-bottom: 60px;
+}
+
+.form__wrapper--secondary {
+  padding-bottom: 46px;
 }
 
 .form__title {
   margin-bottom: 20px;
+  max-width: 245px;
 }
 
 .form__comment {
-  width: 279px;
+  min-width: 279px;
+  width: 100%;
   min-height: 150px;
   border: none;
   background-color: #f2f2f2;
   padding: 16px;
-  margin-bottom: 56px;
 }
 
 .form__comment::placeholder {
   color: rgba(0, 0, 0, 0.3);
+  font-family: $main-font;
 }
 
 .form__button {
   background-color: $base-color;
   color: #ffffff;
   padding: 16px 49px;
+  font-size: 21px;
+  margin-top: 8px;
+  margin-bottom: 2px;
+  width: 100%;
 }
 
 .form__required-text {
@@ -41,5 +69,66 @@
   .form {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 58px;
+    padding: 0 60px;
+  }
+
+  .form__wrapper {
+    min-width: 295px;
+    width: 100%;
+
+    &::before {
+      display: none;
+    }
+
+    &:first-child::after {
+      content: "";
+      width: 1px;
+      height: 338px;
+      display: block;
+      background-color: #dbdbdb;
+      position: absolute;
+      right: -30px;
+      top: -63px;
+    }
+  }
+
+  .form__wrapper--secondary {
+    grid-column: 1 / -1;
+
+    & .form__title {
+      width: 402px;
+      display: block;
+    }
+
+    & .form__title::before {
+      content: "";
+      width: 123px;
+      height: 1px;
+      display: block;
+      background-color: #dbdbdb;
+      position: absolute;
+      left: 0;
+      top: 11px;
+    }
+
+    & .form__title::after {
+      content: "";
+      width: 123px;
+      height: 1px;
+      display: block;
+      background-color: #dbdbdb;
+      position: absolute;
+      right: 0;
+      top: 11px;
+    }
+  }
+
+  .form__title {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 402px;
+    font-size: 21px;
+    margin-bottom: 28px;
   }
 }
