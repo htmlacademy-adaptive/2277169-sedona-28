@@ -25,7 +25,6 @@
 }
 
 .form-list__subtitle--size {
-  width: 218px;
   text-align: left;
   font-weight: 700;
   position: relative;
@@ -92,15 +91,16 @@
 }
 
 .form-list__input[type="checkbox"]:checked + .form-list__control-mark::before {
-  background-image: url("../img/icons/tick-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  mask-image: url("../img/sprite.svg#icon-tick");
+  background-color: #333333;
   content: "";
+  display: block;
   width: 22px;
   height: 16px;
   position: absolute;
-  top: 14px;
-  left: 11px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .form-list__button {
@@ -116,7 +116,7 @@
 }
 
 .form-list__button--phone::after {
-  background-image: url("../img/icons/phone-icon.svg");
+  background-image: url("../img/sprite.svg#icon-phone");
   background-repeat: no-repeat;
   background-position: center;
   content: "";
@@ -129,7 +129,7 @@
 }
 
 .form-list__button--mail::after {
-  background-image: url("../img/icons/mail-icon.svg");
+  background-image: url("../img/sprite.svg#icon-mail");
   background-repeat: no-repeat;
   background-position: center;
   content: "";
@@ -151,19 +151,32 @@
     font-size: 18px;
   }
 
-  .form-list--primary {
-    display: flex;
-    align-items: center;
-    position: relative;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    padding: 0 36px;
+  .form__wrapper--secondary {
+    & .form-list {
+      display: flex;
+      align-items: center;
+      position: relative;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      padding: 0 36px;
+    }
+
+    .form-list--size {
+      min-width: 480px;
+      width: 100%;
+      column-gap: 32px;
+      justify-content: center;
+    }
   }
 
   .form-list__item--row {
     margin: 0;
     max-width: 280px;
     width: 100%;
+  }
+
+  .form-list__item--size {
+    max-width: 224px;
   }
 }

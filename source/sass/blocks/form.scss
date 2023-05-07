@@ -41,6 +41,7 @@
   border: none;
   background-color: #f2f2f2;
   padding: 16px;
+  resize: none;
 }
 
 .form__comment::placeholder {
@@ -71,6 +72,7 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 58px;
     padding: 0 60px;
+    min-width: 648px;
   }
 
   .form__wrapper {
@@ -130,5 +132,122 @@
     max-width: 402px;
     font-size: 21px;
     margin-bottom: 28px;
+  }
+
+  .form__container {
+    display: flex;
+    grid-column: 1 / -1;
+    gap: 132px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -4px;
+  }
+
+  .form__button {
+    padding: 16px 49px;
+    max-width: 324px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .form__required-text {
+    align-self: center;
+    display: block;
+    padding-top: 23px;
+    padding-bottom: 14px;
+    font-size: 14px;
+  }
+
+  .form__comment {
+    min-height: 160px;
+    overflow: hidden;
+
+    &::placeholder {
+      font-size: 18px;
+      min-height: 160px;
+    }
+  }
+
+  .form__wrapper--size {
+    padding-bottom: 42px;
+
+    & .form__title::before,
+    .form__title::after {
+      top: 25px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    padding: 0 120px;
+    column-gap: 100px;
+  }
+
+  .form__wrapper {
+    padding-bottom: 71px;
+  }
+
+  .form__wrapper:first-child::after {
+    right: -51px;
+  }
+
+  .form__wrapper--secondary {
+    padding-bottom: 57px;
+
+    &:last-of-type {
+      padding-bottom: 41px;
+    }
+
+    & .form__title {
+      margin-bottom: 28px;
+    }
+
+    .form-list {
+      padding: 16px 53px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 28px;
+    }
+
+    .form-list__item {
+      min-width: 280px;
+    }
+
+    .form-list__item--size {
+      min-width: 153px;
+    }
+
+    .form-list--size {
+      padding: 31px 53px;
+      grid-template-columns: repeat(4, max-content);
+      max-width: 960px;
+      gap: 64px;
+    }
+
+    & .form__title::before,
+    .form__title::after {
+      width: 280px;
+    }
+
+    .form-list__control {
+      min-width: 91px;
+    }
+  }
+
+  .form__comment {
+    width: 768px;
+  }
+
+  .form__container {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .form__button {
+    padding: 16px 49px;
+    max-width: 384px;
+    width: 100%;
+    margin: 0;
   }
 }

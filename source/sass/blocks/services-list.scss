@@ -24,7 +24,7 @@
 }
 
 .services-list__item--housing::before {
-  background-image: url("../img/icons/house-icon.svg");
+  background-image: url("../img/sprite.svg#icon-house");
   background-repeat: no-repeat;
   content: "";
   background-size: 40px 40px;
@@ -37,7 +37,7 @@
 }
 
 .services-list__item--burger::before {
-  background-image: url("../img/icons/burger-icon.svg");
+  background-image: url("../img/sprite.svg#icon-burger");
   background-repeat: no-repeat;
   content: "";
   background-size: 40px 40px;
@@ -50,7 +50,7 @@
 }
 
 .services-list__item--souvenirs::before {
-  background-image: url("../img/icons/gift-icon.svg");
+  background-image: url("../img/sprite.svg#icon-gift");
   background-repeat: no-repeat;
   content: "";
   background-size: 40px 40px;
