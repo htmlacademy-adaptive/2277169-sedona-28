@@ -31,16 +31,42 @@
   display: block;
   min-height: 46px;
   padding-left: 62px;
+
+  &:hover {
+    .form-list__control-mark {
+      background-color: #e5e5e5;
+    }
+  }
+
+  &:active {
+    .form-list__control-mark {
+      background-color: #d5d5d5;
+    }
+
+    .form-list__input[type="radio"]:checked + .form-list__control-mark::before,
+    .form-list__input[type="checkbox"]:checked + .form-list__control-mark::before {
+      background-color: #3333334d;
+    }
+  }
 }
 
 .form-list__input {
   margin: 0;
   background-color: #f2f2f2;
-  border: none;
   min-height: 58px;
-  padding: 16px;
+  padding: 12px;
+  border: 4px solid transparent;
   font-family: $main-font;
   width: 100%;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    border-color: #e5e5e5;
+    background-color: #ffffff;
+  }
 }
 
 .form-list__input--size {

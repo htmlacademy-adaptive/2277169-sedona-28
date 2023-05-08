@@ -9,6 +9,11 @@
   transform: translate(-50%, -50%);
   background-color: transparent;
   padding: 0;
+  font-family: $main-font;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .video__wrapper {

@@ -12,3 +12,48 @@
   width: 48px;
   height: 48px;
 }
+
+
+.social-list__link {
+  width: 48px;
+  height: 48px;
+  background-color: $base-color;
+  display: block;
+  position: relative;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  &:active {
+    background-color: $active-color;
+  }
+}
+
+.social-list__link::after {
+  content: "";
+  background-color: #ffffff;
+  width: 24px;
+  display: block;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social-list__link:active::after {
+  opacity: 0.3;
+}
+
+.social-list__link--vk::after {
+  mask-image: url("../img/sprite.svg#icon-vk");
+}
+
+.social-list__link--telegram::after {
+  mask-image: url("../img/sprite.svg#icon-telegram");
+}
+
+.social-list__link--youtube::after {
+  mask-image: url("../img/sprite.svg#icon-youtube");
+}

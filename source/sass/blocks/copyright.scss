@@ -4,6 +4,14 @@
   justify-content: center;
   text-decoration: none;
   color: #000000;
+
+  &:hover {
+    color: $base-color;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
 }
 
 .copyright__description {
