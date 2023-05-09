@@ -1,7 +1,32 @@
-@media (min-width: $desktop-width) {
-  .video {
-    background-color: #ffffff;
-  }
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 43%;
+  background-image: url("../img/sprite.svg#icon-video");
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 54px;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  padding: 0;
+  font-family: $main-font;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.video__wrapper {
+  position: relative;
+}
+
+.video__container {
+  padding: 17px 26px 38px 28px;
+}
+
+.video__title {
+  margin: 0;
+  margin-bottom: 27px;
 }
 
 @media (min-width: $tablet-width) {
@@ -12,21 +37,8 @@
   }
 }
 
-.video__wrapper {
-  position: relative;
-}
-
-.video__button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
-.video__container {
-  padding: 17px 26px 38px 28px;
-}
-
-.video__title {
-  margin: 0;
-  margin-bottom: 27px;
+@media (min-width: $desktop-width) {
+  .video {
+    background-color: #ffffff;
+  }
 }

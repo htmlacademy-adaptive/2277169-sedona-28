@@ -23,8 +23,7 @@
   color: #333333;
 }
 
-.services-list__item--housing::before {
-  background-image: url("../img/icons/house-icon.svg");
+.services-list__item::before {
   background-repeat: no-repeat;
   content: "";
   background-size: 40px 40px;
@@ -34,32 +33,18 @@
   height: 40px;
   position: absolute;
   left: 18px;
+}
+
+.services-list__item--housing::before {
+  background-image: url("../img/sprite.svg#icon-house");
 }
 
 .services-list__item--burger::before {
-  background-image: url("../img/icons/burger-icon.svg");
-  background-repeat: no-repeat;
-  content: "";
-  background-size: 40px 40px;
-  background-position: left;
-  display: block;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  left: 18px;
+  background-image: url("../img/sprite.svg#icon-burger");
 }
 
 .services-list__item--souvenirs::before {
-  background-image: url("../img/icons/gift-icon.svg");
-  background-repeat: no-repeat;
-  content: "";
-  background-size: 40px 40px;
-  background-position: left;
-  display: block;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  left: 18px;
+  background-image: url("../img/sprite.svg#icon-gift");
 }
 
 @media (min-width: $tablet-width) {

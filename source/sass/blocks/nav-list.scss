@@ -18,13 +18,7 @@
   padding-bottom: 11px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(1, 1, 1, 0.2);
-}
 
-.nav-list__item--current {
-  color: #766357;
-}
-
-.nav-list__item {
   &:hover {
     background-color: $hover-color;
   }
@@ -32,6 +26,10 @@
   &:active {
     background-color: $active-color;
   }
+}
+
+.nav-list__item--current {
+  color: #766357;
 }
 
 @media (min-width: $tablet-width) {

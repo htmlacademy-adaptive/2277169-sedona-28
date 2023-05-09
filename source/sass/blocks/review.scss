@@ -30,3 +30,17 @@
     margin-bottom: 108px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .review {
+    padding: 116px 0 65px;
+  }
+
+  .review__title {
+    margin-bottom: 32px;
+  }
+
+  .review__description {
+    margin-bottom: 68px;
+  }
+}
