@@ -1,7 +1,7 @@
 .video__button {
   position: absolute;
   top: 50%;
-  left: 43%;
+  left: 50%;
   background-image: url("../img/sprite.svg#icon-video");
   background-repeat: no-repeat;
   width: 48px;
@@ -22,6 +22,8 @@
 
 .video__container {
   padding: 17px 26px 38px 28px;
+  max-width: 445px;
+  margin: 0 auto;
 }
 
 .video__title {
@@ -29,16 +31,32 @@
   margin-bottom: 27px;
 }
 
+.video__image {
+  display: inline-block;
+}
+
 @media (min-width: $tablet-width) {
   .video__container {
     padding: 58px 0 66px;
-    width: 445px;
-    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+
+  .video__title {
+    font-size: 30px;
+    margin-bottom: 31px;
+  }
+
+  .video__wrapper {
+    margin-bottom: 35px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .video {
     background-color: #ffffff;
+  }
+
+  .video__wrapper {
+    margin-bottom: 79px;
   }
 }
