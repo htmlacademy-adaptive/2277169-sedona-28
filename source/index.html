@@ -69,9 +69,11 @@
             </div>
             <div class="infrastructure-list__wrapper-image">
               <picture>
-                <source type="image/webp" media="(min-width: 1200px)" srcset="#">
-                <source type="image/webp" media="(min-width: 768px)" srcset="#">
-                <source type="image/webp" srcset="#">
+                <source type="image/webp" media="(min-width: 1280px)"
+                  srcset="img/picture/city-desktop@1x.webp 1x, img/picture/city-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/picture/city-tablet@1x.webp 1x, img/picture/city-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/picture/city@1x.webp 1x, img/picture/city@2x.webp 2x">
                 <source media="(min-width: 1280px)"
                   srcset="img/picture/city-desktop@1x.jpg 1x, img/picture/city-desktop@2x.jpg 2x" width="800"
                   height="256">
@@ -110,6 +112,11 @@
             </div>
             <div class="infrastructure-list__wrapper-image infrastructure-list__wrapper-image--reverse">
               <picture>
+                <source type="image/webp" media="(min-width: 1280px)"
+                  srcset="img/picture/bridge-desktop@1x.webp 1x, img/picture/bridge-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/picture/bridge-tablet@1x.webp 1x, img/picture/bridge-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/picture/bridge@1x.webp 1x, img/picture/bridge@2x.webp 2x">
                 <source media="(min-width: 1280px)"
                   srcset="img/picture/bridge-desktop@1x.jpg 1x, img/picture/bridge-desktop@2x.jpg 2x" width="800"
                   height="256">
@@ -149,9 +156,14 @@
       </section>
       <div class="map">
         <picture>
+          <source type="image/webp" media="(min-width: 1280px)"
+            srcset="img/picture/map-desktop@1x.webp 1x, img/picture/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/picture/map-tablet@1x.webp 1x, img/picture/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/picture/map@1x.webp 1x, img/picture/map@2x.webp 2x">
           <source media="(min-width: 1280px)"
-            srcset="img/picture/map-desktop@1x.jpg 1x, img/picture/map-desktop@1x.jpg 2x" width="1200" height="350">
-          <source media="(min-width: 768px)" srcset="img/picture/map-tablet@1x.jpg 1x, img/picture/map-tablet@1x.jpg 2x"
+            srcset="img/picture/map-desktop@1x.jpg 1x, img/picture/map-desktop@2x.jpg 2x" width="1200" height="350">
+          <source media="(min-width: 768px)" srcset="img/picture/map-tablet@1x.jpg 1x, img/picture/map-tablet@2x.jpg 2x"
             width="768" height="350">
           <img class="map__image" src="img/picture/map@1x.jpg" srcset="img/picture/map@2x.jpg 2x" alt="Карта"
             width="320" height="350">
@@ -183,7 +195,7 @@
       </ul>
       <a class="main-footer__link copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         <span class="copyright__description">Разработано</span>
-        <svg class="copyright__image" width="27" height="35">
+        <svg class="copyright__image" aria-hidden="true" focusable="false" width="27" height="35">
           <use xlink:href="img/sprite.svg#icon-copyright"></use>
         </svg>
       </a>

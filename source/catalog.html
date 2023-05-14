@@ -60,6 +60,12 @@
           <li class="gallery-list__item gallery-item">
             <div class="gallery-item__wrapper-image">
               <picture>
+                <source type="image/webp" media="(min-width: 1280px)"
+                  srcset="img/picture/catalog-sunset-desktop@1x.webp 1x, img/picture/catalog-sunset-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/picture/catalog-sunset-tablet@1x.webp 1x, img/picture/catalog-sunset-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/picture/catalog-sunset@1x.webp 1x, img/picture/catalog-sunset@2x.webp 2x">
                 <source media="(min-width: 1280px)"
                   srcset="img/picture/catalog-sunset-desktop@1x.jpg 1x, img/picture/catalog-sunset-desktop@2x.jpg 2x"
                   width="1200" height="400">
@@ -81,6 +87,11 @@
           <li class="gallery-list__item gallery-item">
             <div class="gallery-item__wrapper-image">
               <picture>
+                <source type="image/webp" media="(min-width: 1280px)"
+                  srcset="img/picture/nature-desktop@1x.webp 1x, img/picture/nature-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/picture/nature-tablet@1x.webp 1x, img/picture/nature-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/picture/nature@1x.webp 1x, img/picture/nature@2x.webp 2x">
                 <source media="(min-width: 1280px)"
                   srcset="img/picture/nature-desktop@1x.jpg 1x, img/picture/nature-desktop@2x.jpg 2x" width="400"
                   height="267">
@@ -102,6 +113,11 @@
           <li class="gallery-list__item gallery-item gallery-item--another-color">
             <div class="gallery-item__wrapper-image">
               <picture>
+                <source type="image/webp" media="(min-width: 1280px)"
+                  srcset="img/picture/road-desktop@1x.webp 1x, img/picture/road-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/picture/road-tablet@1x.webp 1x, img/picture/road-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/picture/road@1x.webp 1x, img/picture/road@2x.webp 2x">
                 <source media="(min-width: 1280px)"
                   srcset="img/picture/road-desktop@1x.jpg 1x, img/picture/road-desktop@2x.jpg 2x" width="400"
                   height="267">
@@ -123,6 +139,12 @@
           <li class="gallery-list__item gallery-item">
             <div class="gallery-item__wrapper-image">
               <picture>
+                <source type="image/webp" media="(min-width: 1280px)"
+                  srcset="img/picture/catalog-bridge-desktop@1x.webp 1x, img/picture/catalog-bridge-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/picture/catalog-bridge-tablet@1x.webp 1x, img/picture/catalog-bridge-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/picture/catalog-bridge@1x.webp 1x, img/picture/catalog-bridge@2x.webp 2x">
                 <source media="(min-width: 1280px)"
                   srcset="img/picture/catalog-bridge-desktop@1x.jpg 1x, img/picture/catalog-bridge-desktop@2x.jpg 2x"
                   width="400" height="267">
@@ -152,6 +174,14 @@
         <div class="video__wrapper">
           <a class="video__link" href="#" target="_blank">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img/picture/video-desktop@1x.webp 1x, img/picture/video-desktop@2x.webp 2x" width="800"
+                height="500">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/picture/video-tablet@1x.webp 1x, img/picture/video-tablet@2x.webp 2x" width="648"
+                height="500">
+              <source type="image/webp" srcset="img/picture/video@1x.webp 1x, img/picture/video@2x.webp 2x" width="280"
+                height="177">
               <source media="(min-width: 1280px)"
                 srcset="img/picture/video-desktop@1x.jpg 1x, img/picture/video-desktop@2x.jpg 2x" width="800"
                 height="500">
@@ -190,7 +220,7 @@
       </ul>
       <a class="main-footer__link copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         <span class="copyright__description">Разработано</span>
-        <svg class="copyright__image" width="27" height="35">
+        <svg class="copyright__image" aria-hidden="true" focusable="false" width="27" height="35">
           <use xlink:href="img/sprite.svg#icon-copyright"></use>
         </svg>
       </a>
