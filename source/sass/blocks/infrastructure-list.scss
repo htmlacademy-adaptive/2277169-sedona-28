@@ -24,7 +24,7 @@
 }
 
 .infrastructure-list__wrapper {
-  padding: 33px 0 38px;
+  padding: 35px 0 38px;
   width: 284px;
   margin: 0 auto;
 }
@@ -35,7 +35,7 @@
 
   &:first-child::before {
     content: "";
-    background-image: url("../img/icons/copy-ladder-icon.svg");
+    background-image: url("../img/sprite.svg#icon-ladder-advantages");
     background-repeat: no-repeat;
     background-size: 100% 37px;
     min-height: 37px;
@@ -53,7 +53,7 @@
 
 .infrastructure-list__number {
   display: block;
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 }
 
 .infrastructure-list__item--small {
