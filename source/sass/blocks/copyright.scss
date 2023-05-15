@@ -5,35 +5,34 @@
   text-decoration: none;
   color: #000000;
   position: relative;
-}
-
-.copyright::after {
-  content: "";
-  position: absolute;
-  width: 28px;
-  height: 35px;
-  mask-image: url("../img/sprite.svg#icon-copyright");
-  background-color: #000000;
-  top: 0;
-  right: 78px;
-}
-
-.copyright:hover {
-  color: $base-color;
 
   &::after {
-    background-color: $base-color;
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 35px;
+    mask-image: url("../img/sprite.svg#icon-copyright");
+    background-color: #000000;
+    top: 0;
+    right: 78px;
+  }
+
+  &:hover {
+    color: $base-color;
+
+    &::after {
+      background-color: $base-color;
+    }
+  }
+
+  &:active {
+    color: #b3b3b3;
+
+    &::after {
+      background-color: #b3b3b3;
+    }
   }
 }
-
-.copyright:active {
-  color: #b3b3b3;
-
-  &::after {
-    background-color: #b3b3b3;
-  }
-}
-
 
 .copyright__description {
   align-self: center;
@@ -43,5 +42,11 @@
 
   &:hover {
     color: $base-color;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright::after {
+    right: 0;
   }
 }

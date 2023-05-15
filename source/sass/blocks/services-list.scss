@@ -1,6 +1,6 @@
 .services-list {
   @include list-reset;
-  background-color: #ffffff;
+  background-color: $white-color;
   padding-top: 23px;
   padding-bottom: 22px;
   grid-column: 1 / -1;

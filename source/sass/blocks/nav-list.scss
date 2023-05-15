@@ -12,7 +12,7 @@
   cursor: pointer;
   font-size: 18px;
   line-height: 26px;
-  color: #ffffff;
+  color: $white-color;
   display: block;
   padding-top: 17px;
   padding-bottom: 11px;
@@ -41,7 +41,7 @@
     width: 100%;
     position: static;
     min-height: 56px;
-    background-color: #ffffff;
+    background-color: $white-color;
   }
 
   .nav-list__item {
@@ -56,7 +56,7 @@
   .nav-list__link {
     padding-top: 18px;
     padding-bottom: 17px;
-    background-color: #ffffff;
+    background-color: $white-color;
     color: #000000;
     font-size: 14px;
     line-height: 21px;

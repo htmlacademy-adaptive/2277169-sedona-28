@@ -4,7 +4,7 @@
 }
 
 .main-nav__toggle-image {
-  background-color: #ffffff;
+  background-color: $white-color;
 }
 
 .main-nav__toggle {
@@ -14,7 +14,7 @@
   z-index: 2;
   top: 17px;
   right: 19px;
-  background-color: #ffffff;
+  background-color: $white-color;
 
   &:hover {
     opacity: 0.6;
@@ -72,7 +72,7 @@
     left: -3px;
     width: 28px;
     height: 4px;
-    background-color: #ffffff;
+    background-color: $white-color;
   }
 
   &::before {
@@ -86,7 +86,7 @@
 
   &:active::before,
   &:active::after {
-    background-color: fade(#ffffff, 60%);
+    background-color: fade($white-color, 60%);
   }
 }
 

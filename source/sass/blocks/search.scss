@@ -10,7 +10,7 @@
 
 .search__button {
   background-color: $base-color;
-  color: #ffffff;
+  color: $white-color;
   padding: 16px 49px;
   font-size: 21px;
   line-height: 26px;
@@ -63,7 +63,7 @@
 
 @media (min-width: $desktop-width) {
   .search {
-    background-color: #ffffff;
+    background-color: $white-color;
   }
 
   .search__title {
