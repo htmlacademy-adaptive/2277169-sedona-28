@@ -33,9 +33,8 @@
   position: relative;
 
   &::before {
-    background-image: url("../img/sprite.svg#icon-like");
-    background-repeat: no-repeat;
-    background-position: center;
+    mask-image: url("../img/sprite.svg#icon-like");
+    background-color: #ffffff;
     content: "";
     width: 23px;
     height: 21px;

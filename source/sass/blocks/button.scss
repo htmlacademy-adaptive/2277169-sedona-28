@@ -4,17 +4,4 @@
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 700;
-
-  &:hover {
-    background-color: $hover-color;
-  }
-
-  &:active {
-    background-color: $active-color;
-    color: #ffffff4d;
-  }
-
-  &:disabled {
-    background-color: #e5e5e5;
-  }
 }

@@ -4,16 +4,44 @@
   justify-content: center;
   text-decoration: none;
   color: #000000;
+  position: relative;
+}
+
+.copyright::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 35px;
+  mask-image: url("../img/sprite.svg#icon-copyright");
+  background-color: #000000;
+  top: 0;
+  right: 78px;
+}
+
+.copyright:hover {
+  color: $base-color;
+
+  &::after {
+    background-color: $base-color;
+  }
+}
+
+.copyright:active {
+  color: #b3b3b3;
+
+  &::after {
+    background-color: #b3b3b3;
+  }
+}
+
+
+.copyright__description {
+  align-self: center;
+  display: block;
+  padding: 7px 40px;
+  padding-left: 0;
 
   &:hover {
     color: $base-color;
   }
-
-  &:active {
-    color: #b3b3b3;
-  }
-}
-
-.copyright__description {
-  align-self: center;
 }
