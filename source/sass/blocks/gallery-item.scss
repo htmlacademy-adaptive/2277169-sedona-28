@@ -26,7 +26,7 @@
 }
 
 .gallery-item__number {
-  padding-top: 5px;
+  padding-top: 4px;
   font-weight: 700;
   padding-left: 37px;
   display: block;
@@ -34,12 +34,12 @@
 
   &::before {
     mask-image: url("../img/sprite.svg#icon-like");
-    background-color: $white-color;
+    background-color: #000000;
     content: "";
     width: 23px;
     height: 21px;
     position: absolute;
-    top: 11px;
+    top: 8px;
     left: 11px;
     transform: translate(-50%, -50%);
   }
@@ -47,6 +47,35 @@
 
 .gallery-item__wrapper-image {
   width: 100%;
+}
+
+.gallery-item {
+  position: relative;
+
+  &::before,
+  &:last-child::after {
+    content: "";
+    width: 100vw;
+    height: 1px;
+    display: block;
+    background-color: #e5e5e5;
+    position: absolute;
+    left: -20px;
+  }
+
+  &::before {
+    top: -2px;
+  }
+
+  &:last-child::after {
+    bottom: 0;
+  }
+}
+
+.gallery-item__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 @media (min-width: $tablet-width) {
@@ -67,6 +96,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: #f2f2f2;
+
+    &::before {
+      display: none;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
   }
 
   .gallery-item--another-color {
@@ -83,12 +120,6 @@
 
   .gallery-item__wrapper {
     padding: 22px 20px 15px;
-    justify-self: start;
-  }
-
-  .gallery-item__container {
-    padding: 28px 20px 27px;
-    justify-self: end;
   }
 
   .gallery-item__number {
@@ -101,6 +132,18 @@
     background-color: inherit;
     padding: 27px 0;
   }
+
+  .gallery-item__container {
+    flex-direction: row;
+    width: 100%;
+    align-items: initial;
+    min-width: 648px;
+    min-height: 80px;
+  }
+
+  .gallery-item__container--small {
+    min-width: 324px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -109,23 +152,37 @@
   }
 
   .gallery-item__wrapper {
-    position: absolute;
-    bottom: 0;
     color: $white-color;
+  }
+
+  .gallery-item__wrapper--small {
+    padding: 17px 25px;
+
+    & .gallery-item__title {
+      margin-bottom: 3px;
+    }
   }
 
   .gallery-item__description {
     color: inherit;
   }
 
-  .gallery-item__button {
+  .gallery-item__container {
     position: absolute;
-    bottom: 1px;
-    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    align-items: center;
+  }
+
+  .gallery-item__button {
     background-color: transparent;
   }
 
   .gallery-item__number {
     color: $white-color;
+
+    &::before {
+      background-color: rgba(255, 255, 255, 1);
+    }
   }
 }

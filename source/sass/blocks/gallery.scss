@@ -1,5 +1,5 @@
 .gallery__wrapper {
-  padding: 40px 0 21px;
+  padding: 38px 0 21px;
 }
 
 .gallery__title {
@@ -31,8 +31,16 @@
     margin-bottom: 32px;
   }
 
-  .gallery__description br {
-    display: inline;
+  .gallery__description {
+    padding-left: 2px;
+
+    & br {
+      display: inline;
+    }
+
+    &nbsp {
+      display: none;
+    }
   }
 }
 
@@ -43,6 +51,10 @@
   }
 
   .gallery__wrapper {
-    padding: 100px 0 67px;
+    padding: 99px 0 67px;
+  }
+
+  .gallery__description {
+    padding-left: 0;
   }
 }

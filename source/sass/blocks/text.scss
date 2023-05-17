@@ -6,3 +6,39 @@
 .text--light {
   color: $white-color;
 }
+
+.text__description {
+  white-space: normal;
+}
+
+.text__desktop {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .text__description {
+    white-space: nowrap;
+
+    & br {
+      display: none;
+    }
+  }
+
+  .text__mobile--secondary {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .text__description {
+    white-space: normal;
+  }
+
+  .text__mobile {
+    display: none;
+  }
+
+  .text__desktop {
+    display: inline;
+  }
+}

@@ -1,9 +1,7 @@
 .services-list {
   @include list-reset;
   background-color: $white-color;
-  padding-top: 23px;
-  padding-bottom: 22px;
-  grid-column: 1 / -1;
+  padding: 23px 0 21px;
 }
 
 .services-list__title {
@@ -54,6 +52,7 @@
     width: 100%;
     min-width: 768px;
     padding: 0;
+    grid-column: 1 / -1;
   }
 
   .services-list__title {
@@ -67,18 +66,14 @@
     margin: 0;
     padding: 0;
     text-align: center;
-
-    & br {
-      display: none;
-    }
   }
 
   .services-list__item {
     width: 33%;
     min-width: 256px;
-    padding: 60px 33px;
-    min-height: 331px;
     position: relative;
+    padding: 61px 43px;
+    max-height: 330px;
   }
 
   .services-list__item--housing::before,
@@ -91,14 +86,6 @@
     height: 72px;
     left: 50%;
     transform: translate(-50%);
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .services-list__item {
-    padding: 61px 43px;
-    max-height: 330px;
-    min-width: 256px;
   }
 
   .services-list__item--burger {
