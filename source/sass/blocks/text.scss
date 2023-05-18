@@ -11,9 +11,6 @@
   white-space: normal;
 }
 
-.text__desktop {
-  display: none;
-}
 
 @media (min-width: $tablet-width) {
   .text__description {
@@ -24,7 +21,7 @@
     }
   }
 
-  .text__mobile--secondary {
+  .text__transfer {
     display: none;
   }
 }
@@ -34,7 +31,7 @@
     white-space: normal;
   }
 
-  .text__mobile {
+  .text__transfer {
     display: none;
   }
 

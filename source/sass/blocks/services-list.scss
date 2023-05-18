@@ -100,7 +100,7 @@
 @media (min-width: $desktop-width) {
   .services-list__item {
     padding: 72px 45px;
-    min-width: 400px;
+    max-width: 400px;
   }
 
   .services-list__item--burger {
