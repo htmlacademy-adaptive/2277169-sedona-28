@@ -1,16 +1,16 @@
 .advantages__title {
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 37px;
 }
 
 .advantages__container {
-  padding: 32px 6px 16px;
+  padding: 32px 0 16px;
   margin: 0 auto;
   max-width: 284px;
 }
 
 .advantages {
-  background-color: #ffffff;
+  background-color: $white-color;
 }
 
 @media (min-width: $tablet-width) {
@@ -21,6 +21,10 @@
 
   .advantages__title {
     margin-bottom: 30px;
+
+    & br {
+      display: none;
+    }
   }
 }
 

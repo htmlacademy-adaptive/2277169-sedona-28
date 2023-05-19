@@ -5,18 +5,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="icon" href="img/favicons/icon.svg" type="img/svg+xml">
   <link rel="apple-touch-icon" href="images/favicons/apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
+  <meta name="description" content="Седона — небольшой городок в Аризоне, заслуживающий большего!">
 </head>
 
 <body class="page__body">
   <div class="container container--design">
     <header class="main-header">
       <a class="main-header__logo" href="index.html">
-        <img class="main-header__logo-image" src="img/icons/logotype-icon.svg" alt="Логотип города Седона" width="185"
+        <img class="main-header__logo-image" src="img/logotype-icon.svg" alt="Логотип города Седона." width="185"
           height="96">
       </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -46,8 +47,8 @@
       <section class="hero hero--catalog">
         <div class="hero__wrapper">
           <h2 class="visually-hidden">Приглашаем Вас</h2>
-          <img class="hero__image hero__image--catalog" src="img/icons/sedona-catalog-icon.svg"
-            alt="Добро пожаловать в Седону">
+          <img class="hero__image hero__image--catalog" src="img/sedona-catalog-icon.svg"
+            alt="Добро пожаловать в Седону.">
         </div>
       </section>
       <section class="review">
@@ -65,13 +66,13 @@
                 <input class="form-list__input title" type="text" name="name" placeholder="Пётр" id="name" required>
               </li>
               <li class="form-list__item">
-                <label class="form-list__subtitle" for="form__subtitle">Фамилия*:</label>
-                <input class="form-list__input title" type="form__input" name="surname" placeholder="Пустота"
-                  id="surname" required>
+                <label class="form-list__subtitle" for="surname">Фамилия*:</label>
+                <input class="form-list__input title" type="text" name="surname" placeholder="Пустота" id="surname"
+                  required>
               </li>
               <li class="form-list__item">
-                <label class="form-list__subtitle" for="form__subtitle">Отчество:</label>
-                <input class="form-list__input title" type="form__input" name="last-name" placeholder="Викторович"
+                <label class="form-list__subtitle" for="last-name">Отчество:</label>
+                <input class="form-list__input title" type="text" name="last-name" placeholder="Викторович"
                   id="last-name">
               </li>
             </ul>
@@ -179,30 +180,53 @@
       <span class="main-footer__title title">#visitSEDONA</span>
       <ul class="main-footer__list social-list">
         <li class="social-list__item">
-          <a class="social-list__link social-list__link--vk" href="#">
+          <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Мы в ВКонтакте</span>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link social-list__link--telegram" href="#">
+          <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Мы в Телеграм</span>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link social-list__link--youtube" href="#">
+          <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">Мы в Youtube</span>
           </a>
         </li>
       </ul>
       <a class="main-footer__link copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-        <span class="copyright__description">Разработано</span>
-        <svg class="copyright__image" width="27" height="35">
-          <use xlink:href="img/sprite.svg#icon-copyright"></use>
-        </svg>
+        <span class="copyright__description">Разработано
+          <span class="visually-hidden">htmlacademy</span>
+        </span>
       </a>
     </footer>
   </div>
-  <script src="script.js"></script>
+  <div class="modal modal--close">
+    <div class="modal__container">
+      <section class="modal__content">
+        <h2 class="visually-hidden">Ошибка</h2>
+        <p class="modal__title title">Что-то пошло<br> не так!</p>
+        <p class="modal__description text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="modal__close-button button">
+          <span class="visually-hidden">Закрыть</span>
+          <span class="modal__button-text title">ок</span>
+        </button>
+      </section>
+    </div>
+    <div class="modal__container modal__container--review">
+      <section class="modal__content modal__content--review">
+        <h2 class="modal__title modal__title--review title">Ваш отзыв отправлен!</h2>
+        <p class="modal__description modal__description--review text">Спасибо за ваше участие, ваш отзыв уже поступил к
+          нам.<br> В ближайшее время мы
+          опубликуем его на сайте.</p>
+      </section>
+      <button class="modal__close-button modal__close-button--review button">
+        <span class="modal__button-text title">Закрыть окно</span>
+      </button>
+    </div>
+  </div>
+  <script src="./js/script.js" defer></script>
 </body>
 
 </html>

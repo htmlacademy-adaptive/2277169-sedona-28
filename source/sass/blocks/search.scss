@@ -10,16 +10,29 @@
 
 .search__button {
   background-color: $base-color;
-  color: #ffffff;
+  color: $white-color;
   padding: 16px 49px;
   font-size: 21px;
   line-height: 26px;
   margin-bottom: 49px;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  &:active {
+    background-color: $active-color;
+    color: #ffffff4d;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
 }
 
 .search__title {
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   font-size: 21px;
 }
 
@@ -50,7 +63,7 @@
 
 @media (min-width: $desktop-width) {
   .search {
-    background-color: #ffffff;
+    background-color: $white-color;
   }
 
   .search__title {

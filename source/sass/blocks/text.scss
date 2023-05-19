@@ -4,5 +4,32 @@
 }
 
 .text--light {
-  color: #ffffff;
+  color: $white-color;
+}
+
+.text__transfer--desktop,
+.text__transfer--bridge {
+  display: none;
+}
+
+
+@media (min-width: $tablet-width) {
+  .text__transfer--tablet {
+    display: none;
+  }
+
+  .text__transfer--desktop {
+    display: inline;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .text__transfer {
+    display: none;
+  }
+
+  .text__transfer--desktop,
+  .text__transfer--bridge {
+    display: inline;
+  }
 }

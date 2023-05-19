@@ -4,18 +4,8 @@
 }
 
 .infrastructure-list__item--bg-primary {
-  color: #ffffff;
+  color: $white-color;
   background-color: $base-color;
-}
-
-.infrastructure-list__wrapper-ladder {
-  padding: 68px 18px 40px;
-  grid-row: 1 / -1;
-}
-
-.infrastructure-list__wrapper-image {
-  grid-column: 2 / -1;
-  grid-row: 1 / -1;
 }
 
 .infrastructure-list__image {
@@ -24,9 +14,13 @@
 }
 
 .infrastructure-list__wrapper {
-  padding: 33px 0 38px;
+  padding: 37px 12px;
   width: 284px;
   margin: 0 auto;
+}
+
+.infrastructure-list__wrapper--ladder {
+  padding: 33px 0 40px;
 }
 
 .infrastructure-list__item {
@@ -35,7 +29,7 @@
 
   &:first-child::before {
     content: "";
-    background-image: url("../img/icons/copy-ladder-icon.svg");
+    background-image: url("../img/sprite.svg#icon-ladder-advantages");
     background-repeat: no-repeat;
     background-size: 100% 37px;
     min-height: 37px;
@@ -44,7 +38,7 @@
 
 .infrastructure-list__title {
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
 
   & br {
     display: none;
@@ -57,7 +51,20 @@
 }
 
 .infrastructure-list__item--small {
-  padding: 22px 18px 27px;
+  padding: 24px 18px 27px;
+  position: relative;
+
+
+  &:not(:last-child)::after {
+    content: "";
+    width: 88%;
+    height: 1px;
+    display: block;
+    background-color: #d6d6d6;
+    position: absolute;
+    bottom: 2px;
+    right: 6%;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -106,6 +113,11 @@
     padding: 52px 0 31px;
   }
 
+  .infrastructure-list__wrapper-image {
+    grid-column: 2 / -1;
+    grid-row: 1/-1;
+  }
+
   .infrastructure-list__wrapper-image--reverse {
     grid-column: 1 / 3;
     grid-row: 1/-1;
@@ -118,6 +130,10 @@
 
     & .infrastructure-list__title {
       padding: 0 35px;
+    }
+
+    &:not(:last-child)::after {
+      display: none;
     }
   }
 
@@ -134,10 +150,6 @@
   .infrastructure-list__title {
     margin-bottom: 13px;
     padding: 0 52px;
-
-    & br {
-      display: inline;
-    }
   }
 
   .infrastructure-list__wrapper {
@@ -146,7 +158,7 @@
   }
 
   .infrastructure-list__item--small {
-    padding: 51px 0;
+    padding: 52px 0;
     max-width: 300px;
     margin: 0 auto;
 
