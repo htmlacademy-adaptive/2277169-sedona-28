@@ -24,19 +24,19 @@
       background-image: url("../img/picture/bg-hero-desktop@2x.jpg");
     }
   }
-}
 
-.hero::after {
-  content: "";
-  height: 57px;
-  width: 100%;
-  display: block;
-  background-image: url("../img/sprite.svg#icon-ladder");
-  background-repeat: no-repeat;
-  background-size: 233% 57px;
-  background-position: bottom;
-  position: absolute;
-  bottom: 0;
+  &::after {
+    content: "";
+    height: 57px;
+    width: 100%;
+    display: block;
+    background-image: url("../img/sprite.svg#icon-ladder");
+    background-repeat: no-repeat;
+    background-size: 233% 57px;
+    background-position: bottom;
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 .hero__image {

@@ -10,6 +10,8 @@
   <link rel="icon" href="img/favicons/icon.svg" type="img/svg+xml">
   <link rel="apple-touch-icon" href="images/favicons/apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
   <meta name="description" content="Седона — небольшой городок в Аризоне, заслуживающий большего!">
 </head>
 
@@ -81,20 +83,17 @@
             <legend class="form__title title">Контактная информация:</legend>
             <ul class="form__list form-list">
               <li class="form-list__item">
-                <label class="form-list__subtitle" for="number">Контактный телефон*:</label>
+                <label class="form-list__subtitle form-list__subtitle--contacts form-list__subtitle--contacts-phone"
+                  for="number">Контактный
+                  телефон*:</label>
                 <input class="form-list__input form-list__input--contacts title" type="tel" name="phone"
                   placeholder="Введите телефон" id="number" required>
-                <button class="form-list__button form-list__button--phone button" type="button">
-                  <span class="visually-hidden">Позвонить</span>
-                </button>
               </li>
               <li class="form-list__item">
-                <label class="form-list__subtitle" for="email">Электронная почта*:</label>
+                <label class="form-list__subtitle form-list__subtitle--contacts form-list__subtitle--contacts-mail"
+                  for="email">Электронная почта*:</label>
                 <input class="form-list__input form-list__input--contacts title" type="email" name="email"
                   placeholder="Введите e-mail" id="email" required>
-                <button class="form-list__button form-list__button--mail button" type="button">
-                  <span class="visually-hidden">Написать сообщение</span>
-                </button>
               </li>
             </ul>
           </fieldset>
@@ -163,11 +162,11 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__wrapper form__wrapper--secondary">
-            <legend class="form__title title">Опишите свои эмоции:</legend>
-            <textarea class="form__comment title" name="comment"
-              placeholder="Опишите подробно все свои восторги"></textarea>
-          </fieldset>
+          <div class="form__wrapper form__wrapper--secondary form__wrapper--comment">
+            <label class="form__title title" for="comment">Опишите свои эмоции:</label>
+            <textarea class="form__comment title" name="comment" placeholder="Опишите подробно все свои восторги"
+              id="comment"></textarea>
+          </div>
           <div class="form__container">
             <button class="form__button button title" type="submit">Отправить отзыв</button>
             <p class="form__required-text text">* — обязательные поля</p>
@@ -208,7 +207,7 @@
         <h2 class="visually-hidden">Ошибка</h2>
         <p class="modal__title title">Что-то пошло<br> не так!</p>
         <p class="modal__description text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="modal__close-button button">
+        <button class="modal__close-button button" type="button">
           <span class="visually-hidden">Закрыть</span>
           <span class="modal__button-text title">ок</span>
         </button>
@@ -221,7 +220,7 @@
           нам.<br> В ближайшее время мы
           опубликуем его на сайте.</p>
       </section>
-      <button class="modal__close-button modal__close-button--review button">
+      <button class="modal__close-button modal__close-button--review button" type="button">
         <span class="modal__button-text title">Закрыть окно</span>
       </button>
     </div>

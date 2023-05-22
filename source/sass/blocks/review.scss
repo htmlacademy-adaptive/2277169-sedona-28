@@ -1,5 +1,5 @@
 .review {
-  padding: 36px 20px 22px;
+  padding: 36px 20px 24px;
   background-color: $white-color;
 }
 
@@ -33,7 +33,7 @@
 
 @media (min-width: $desktop-width) {
   .review {
-    padding: 116px 0 65px;
+    padding: 116px 0 64px;
   }
 
   .review__title {
