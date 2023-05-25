@@ -45,7 +45,8 @@
   }
 }
 
-.gallery-item__wrapper-image {
+.gallery-item__link {
+  display: block;
   width: 100%;
 }
 
@@ -79,7 +80,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .gallery-item__wrapper-image {
+  .gallery-item__link {
     grid-column: 1 / -1;
   }
 

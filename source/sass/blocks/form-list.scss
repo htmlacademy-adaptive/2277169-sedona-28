@@ -31,23 +31,6 @@
   display: block;
   min-height: 46px;
   padding-left: 62px;
-
-  &:hover {
-    .form-list__control-mark {
-      background-color: #e5e5e5;
-    }
-  }
-
-  &:active {
-    .form-list__control-mark {
-      background-color: #d5d5d5;
-    }
-
-    .form-list__input[type="radio"]:checked + .form-list__control-mark::before,
-    .form-list__input[type="checkbox"]:checked + .form-list__control-mark::before {
-      background-color: #3333334d;
-    }
-  }
 }
 
 .form-list__input {
@@ -57,16 +40,45 @@
   border: 4px solid transparent;
   font-family: $main-font;
   width: 100%;
-
-  &:hover {
-    background-color: #e5e5e5;
-  }
-
-  &:active {
-    border-color: #e5e5e5;
-    background-color: $white-color;
-  }
 }
+
+.form-list__input:hover,
+.form-list__input:hover + .form-list__control-mark {
+  background-color: #e5e5e5;
+}
+
+.form-list__input:focus,
+.form-list__input:focus + .form-list__control-mark {
+  background-color: #e6e6e6;
+}
+
+.form-list__input[type="radio"][checked]:focus + .form-list__control-mark::before,
+.form-list__input[type="checkbox"][checked]:focus + .form-list__control-mark::before {
+  background-color: rgba(51, 51, 51, 0.6);
+}
+
+.form-list__input:active {
+  border-color: #e5e5e5;
+  background-color: $white-color;
+}
+
+.form-list__input:active + .form-list__control-mark {
+  background-color: #d5d5d5;
+}
+
+.form-list__input[type="radio"][checked]:active + .form-list__control-mark::before,
+.form-list__input[type="checkbox"][checked]:active + .form-list__control-mark::before {
+  background-color: rgba(51, 51, 51, 0.3);
+}
+
+.form-list__input:disabled {
+  opacity: 0.1;
+}
+
+.form-list__input:disabled + .form-list__control-mark {
+  opacity: 0.3;
+}
+
 
 .form-list__input--size {
   width: 46px;
@@ -77,8 +89,12 @@
   color: #000000;
 }
 
-.form-list__input--contacts::placeholder {
-  color: rgba(0, 0, 0, 0.3);
+.form-list__input--contacts {
+  width: calc(100% - 58px);
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .form-list__control-mark {
@@ -96,9 +112,10 @@
 }
 
 .form-list__input[type="radio"]:checked + .form-list__control-mark::before {
-  background: #3f5e72;
-  border-radius: 20px;
+  mask-image: url("../img/sprite.svg#icon-circle");
+  background-color: #333333;
   content: "";
+  display: block;
   width: 16px;
   height: 16px;
   position: absolute;
@@ -128,7 +145,8 @@
   transform: translate(-50%, -50%);
 }
 
-.form-list__button {
+.form-list__subtitle--contacts::before {
+  content: "";
   position: absolute;
   right: 0;
   top: 21px;
@@ -140,7 +158,7 @@
   padding: 0;
 }
 
-.form-list__button::after {
+.form-list__subtitle--contacts::after {
   background-repeat: no-repeat;
   background-position: center;
   content: "";
@@ -148,21 +166,15 @@
   height: 18px;
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 20px;
 }
 
-.form-list__button--mail::after {
-  background-image: url("../img/sprite.svg#icon-mail");
-}
-
-.form-list__button--phone::after {
+.form-list__subtitle--contacts-phone::after {
   background-image: url("../img/sprite.svg#icon-phone");
 }
 
-.form-list__input--contacts {
-  min-width: 222px;
-  padding-right: 72px;
+.form-list__subtitle--contacts-mail::after {
+  background-image: url("../img/sprite.svg#icon-mail");
 }
 
 @media (min-width: $tablet-width) {

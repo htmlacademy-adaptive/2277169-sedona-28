@@ -19,21 +19,32 @@
     top: -71px;
     left: -20px;
   }
+}
 
-  &:nth-last-of-type(2)::before {
-    top: -98px;
-  }
+.form__wrapper--size::before {
+  top: -98px;
 }
 
 .form__wrapper--primary {
-  padding-bottom: 60px;
+  padding-bottom: 59px;
 }
 
 .form__wrapper--secondary {
   padding-bottom: 46px;
 }
 
+
+.form__wrapper--comment {
+  padding-bottom: 47px;
+
+  &::before {
+    top: -26px;
+  }
+}
+
 .form__title {
+  display: block;
+  margin: 0 auto;
   margin-bottom: 20px;
   max-width: 245px;
 }
@@ -56,7 +67,7 @@
 .form__button {
   background-color: $base-color;
   color: $white-color;
-  padding: 16px 49px;
+  padding: 16px 48px;
   font-size: 21px;
   margin-top: 3px;
   margin-bottom: 2px;
@@ -115,31 +126,23 @@
   .form__wrapper--secondary {
     grid-column: 1 / -1;
 
-    & .form__title {
-      width: 402px;
-      display: block;
-    }
-
-    & .form__title::before {
+    &::before,
+    &::after {
       content: "";
-      width: 123px;
+      width: 19%;
       height: 1px;
       display: block;
       background-color: #dbdbdb;
       position: absolute;
+      top: -43px;
+    }
+
+    &::before {
       left: 0;
-      top: 11px;
     }
 
-    & .form__title::after {
-      content: "";
-      width: 123px;
-      height: 1px;
-      display: block;
-      background-color: #dbdbdb;
-      position: absolute;
+    &::after {
       right: 0;
-      top: 11px;
     }
   }
 
@@ -188,9 +191,16 @@
   .form__wrapper--size {
     padding-bottom: 42px;
 
-    & .form__title::before,
-    .form__title::after {
-      top: 25px;
+    &::before,
+    &::after {
+      top: -55px;
+    }
+  }
+
+  .form__wrapper--comment {
+    &::before,
+    &::after {
+      top: 12px;
     }
   }
 }
@@ -210,11 +220,7 @@
   }
 
   .form__wrapper--secondary {
-    padding-bottom: 57px;
-
-    &:last-of-type {
-      padding-bottom: 41px;
-    }
+    padding-bottom: 56px;
 
     & .form__title {
       margin-bottom: 28px;
@@ -242,14 +248,18 @@
       gap: 64px;
     }
 
-    & .form__title::before,
-    .form__title::after {
+    &::before,
+    &::after {
       width: 280px;
     }
 
     .form-list__control {
       min-width: 91px;
     }
+  }
+
+  .form__wrapper--comment {
+    padding-bottom: 43px;
   }
 
   .form__comment {
